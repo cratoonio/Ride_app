@@ -24,22 +24,39 @@
 
           <hr>
 
-
-        <div class="row well">
-            <lable for="origin">Origin</lable>
+    <div class="well">
+        <div class="row">
+            <div class="col-xs-10">
+            <label for="origin">Origin</label>
             <input type="text" name="origin" placeholder="Origin" class="form-control">
-            <lable for="withPay">With Pay</lable>
+                </div>
+            <div class="col-xs-2">
+            <label for="withPay">Pay</label>
             <input type="checkbox" name="withPay" class="checkbox form-control">
         </div>
-        <div class="row well">
-            <lable for="stops">stops</lable>
+        </div>
+            <div class="row">
+                <div class="col-xs-12">
+                <label for="amount">Amount</label>
+                <input type="number" name="amount" placeholder="amount" class="form-control">
+                </div>
+            </div>
+
+        <div class="row ">
+            <div class="col-xs-12">
+            <label for="stops">stops</label>
             <input type="text" name="stops" placeholder="Stops" class="form-control">
+            </div>
         </div>
-        <div class="row well">
-            <lable for="destination">destination</lable>
+        <div class="row">
+            <div class="col-xs-12">
+            <label for="destination">destination</label>
             <input type="text" name="destination" placeholder="Destination" class="form-control">
+            </div>
         </div>
+    </div>
         <div class="row well">
+            <div class="col-xs-12">
             <div class="col-xs-3">
                 <a href="#" class="btn-block btn btn-primary">f</a>
             </div>
@@ -52,6 +69,7 @@
             <div class="col-xs-3">
                 <a href="#" class="btn-block btn btn-primary">Phone</a>
             </div>
+        </div>
         </div>
 
      </div>
