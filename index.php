@@ -5,31 +5,55 @@
     <!-- Main jumbotron for a primary m arketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h1>Welcome, <?php echo $_SESSION['username'] ?>!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        <h1>Welcome!</h1>
+
       </div>
     </div>
 
     <div class="container">
-      <!-- Example row of columns -->
+
       <div class="row">
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        <div class="col-xs-6">
+            <a href="#" class="btn btn-block btn-lg btn-default">new ride</a>
         </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
+
+          <div class="col-xs-6">
+              <a href="#" class="btn btn-block btn-lg btn-default">tramp</a>
+          </div>
       </div>
 
-      <hr>
+          <hr>
+
+
+        <div class="row well">
+            <lable for="origin">Origin</lable>
+            <input type="text" name="origin" placeholder="Origin" class="form-control">
+            <lable for="withPay">With Pay</lable>
+            <input type="checkbox" name="withPay" class="checkbox form-control">
+        </div>
+        <div class="row well">
+            <lable for="stops">stops</lable>
+            <input type="text" name="stops" placeholder="Stops" class="form-control">
+        </div>
+        <div class="row well">
+            <lable for="destination">destination</lable>
+            <input type="text" name="destination" placeholder="Destination" class="form-control">
+        </div>
+        <div class="row well">
+            <div class="col-xs-3">
+                <a href="#" class="btn-block btn btn-primary">f</a>
+            </div>
+            <div class="col-xs-3">
+                <a href="#" class="btn-block btn btn-primary">WA</a>
+            </div>
+            <div class="col-xs-3">
+                <a href="#" class="btn-block btn btn-primary">SMS</a>
+            </div>
+            <div class="col-xs-3">
+                <a href="#" class="btn-block btn btn-primary">Phone</a>
+            </div>
+        </div>
+
+     </div>
+
     <?php include 'footer.php'; ?>
