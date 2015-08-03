@@ -5,6 +5,7 @@
 <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/jquery.flip.js"></script>
+<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
 
 
@@ -15,6 +16,7 @@
         $('select').addClass('form-control input-sm')
     });
     $("#card").flip();
+    $('.datepicker').datepicker()
 
 </script>
 

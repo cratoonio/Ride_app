@@ -31,8 +31,14 @@
                                     <input type="number" name="amount" placeholder="amount" class="form-control">
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <label for="dateTime">Time</label>
+                                    <div class="datepicker" data-date="12/03/2012"></div>
+                                </div>
+                            </div>
 
-                            <div class="row ">
+                            <div class="row">
                                 <div class="col-xs-12">
                                     <label for="stops">stops</label>
                                     <input type="text" name="stops" placeholder="Stops" class="form-control">
@@ -63,6 +69,13 @@
                                     <input type="text" name="destination" placeholder="Destination" class="form-control">
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <label for="dateTime">Time</label>
+                                    <input type="datetime" name="dateTime" class="form-control">
+                                </div>
+                            </div>
+
 
                         </div>
                     </div>
@@ -77,7 +90,7 @@
 <!---->
 <!--                <a href="#" class="btn btn-success"><img src="images/android-512.png" style="height: 77px;"></a>-->
 <!---->
-<
+
 
 
     <?php include 'footer.php'; ?>

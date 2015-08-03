@@ -13,6 +13,8 @@
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker3.css">
+
     <style>
         body {
             padding-top: 0px;
