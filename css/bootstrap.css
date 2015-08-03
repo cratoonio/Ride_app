@@ -906,6 +906,14 @@ body {
   color: #333;
   background-color: #fff;
 }
+#myNav {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 125px;
+  line-height: 1.42857143;
+  color: #ffffff;
+
+  font-weight: 700;
+}
 input,
 button,
 select,
@@ -3833,7 +3841,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar {
   position: relative;
-  min-height: 50px;
+  min-height: 70px;
   margin-bottom: 20px;
   border: 1px solid transparent;
 }
@@ -3977,12 +3985,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-toggle .icon-bar {
   display: block;
-  width: 22px;
-  height: 2px;
-  border-radius: 1px;
+  width: 37px;
+  height: 7px;
+  border-radius: 2px;
 }
 .navbar-toggle .icon-bar + .icon-bar {
-  margin-top: 4px;
+  margin-top: 6px;
 }
 @media (min-width: 768px) {
   .navbar-toggle {
@@ -4257,7 +4265,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #ccc;
 }
 .navbar-inverse {
-  background-color: #222;
+  background-color: #34495e;
   border-color: #080808;
 }
 .navbar-inverse .navbar-brand {
@@ -4272,7 +4280,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #9d9d9d;
 }
 .navbar-inverse .navbar-nav > li > a {
-  color: #9d9d9d;
+  color: #FFFFFF;
 }
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {

@@ -11,19 +11,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/login.css">
     <style>
         body {
-            padding-top: 50px;
-            padding-bottom: 20px;
+            padding-top: 0px;
+            padding-bottom: 0px;
         }
     </style>
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/jquery.dataTables.css">
-    <link rel="stylesheet" href="css/jquery.dataTables_themeroller.css">
 
+    <link rel="stylesheet" href="css/main.css">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     <script type="javascript" src="js/jquery-1.11.3.min.js"></script>
 </head>

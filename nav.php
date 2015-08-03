@@ -12,16 +12,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><img alt="Brand" style="height: 39px;margin-top: -9px;" src="images/turbine.png"/></a>
+            <a class="navbar-brand" href="#"><img alt="Brand" style="height: 56px;margin-top: -9px;" src="images/turbine.png"/></a>
 
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-left">
-
+                <li><a href="#" id="myNav">new Ride</a></li>
+                <li><a href="#" id="myNav">get Ride</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
 
-                </li>
+
             </ul>
         </div><!--/.navbar-collapse -->
     </div>
