@@ -13,6 +13,10 @@ button{margin-top: 4px;}
 html, body, div, ul {
    box-sizing: border-box;
 }
+body {
+   padding-top: 0px;
+   padding-bottom: 0px;
+}
 
 html, body {
    margin: 0;
@@ -24,7 +28,13 @@ html, body {
    height: 610px;
 
 }
-
+.btn{
+   margin-bottom: 10px;
+}
+.row{
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
 .card a.thumb {
    float: left;
    width: 100px;

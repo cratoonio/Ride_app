@@ -16,10 +16,7 @@
     <link rel="stylesheet" href="css/bootstrap-datepicker3.css">
 
     <style>
-        body {
-            padding-top: 0px;
-            padding-bottom: 0px;
-        }
+
     </style>
 
     <link rel="stylesheet" href="css/main.css">

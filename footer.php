@@ -15,7 +15,16 @@
         $('input').addClass('form-control input-sm')
         $('select').addClass('form-control input-sm')
     });
-    $("#card").flip();
+    $("#card").flip({
+        trigger: 'manual'
+    });
+
+
+    $(".flipme").click(function(){
+        $("#card").flip('toggle');
+    });
+
+
     $('.datepicker').datepicker()
 
 </script>

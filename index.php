@@ -1,20 +1,14 @@
 
 <?php include 'header.php'; ?>
 <body>
-
-    <div class="jumbotron">
-      <div class="container text-center">
-        <h1>Welcome!</h1>
-          <h3>This is turbines social experiment. </h3>
-          <h3>feel free to contact us.</h3>
-        <!-- Modal -->
-          </div>
-    </div>
+<?php //include 'nav.php' ?>
     <div class="container">
                     <div class="card" id="card" >
                         <div class="front">
+                            <i  class="glyphicon glyphicon-indent-left pull-right flipme" ></i>
 
                                 <h2>Give A Ride</h2>
+
                             <div class="row">
                                 <div class="col-xs-10">
                                     <label for="origin">Origin</label>
@@ -25,13 +19,27 @@
                                     <input type="checkbox" name="withPay" class="checkbox form-control">
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <label for="amount">Amount</label>
-                                    <input type="number" name="amount" placeholder="amount" class="form-control">
+
+                            <div class="row bg-success">
+                                <i class="glyphicon glyphicon-chevron-down pull-right" style="margin-right: 9%;color: #16A085;"></i>
+
+                                <div class="col-xs-12 ">
+                                    <div class="btn-group" role="group" aria-label="...">
+                                        <button type="button" class="btn btn-default">5 </button>
+                                        <button type="button" class="btn btn-default">10</button>
+                                        <button type="button" class="btn btn-default">15</button>
+                                        <button type="button" class="btn btn-default">20</button>
+                                        <button type="button" class="btn btn-default">25</button>
+                                        <button type="button" class="btn btn-default">30</button>
+                                        <button type="button" class="btn btn-default">35</button>
+                                        <button type="button" class="btn btn-default">40</button>
+
+                                    </div>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row bg-success">
+                                <i class="glyphicon glyphicon-chevron-down pull-right" style="margin-right: 9%;color: #16A085;"></i>
+
                                 <div class="col-xs-12">
                                     <label for="dateTime">Time</label>
                                     <div class="datepicker" data-date="12/03/2012"></div>
@@ -55,7 +63,7 @@
 
                         <!-- Modal 1 -->
                         <div class="back">
-
+                            <i  class="glyphicon glyphicon-indent-left pull-right flipme" ></i>
                                 <h2>Get A Ride</h2>
                             <div class="row">
                                 <div class="col-xs-12">
