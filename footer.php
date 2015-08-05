@@ -26,20 +26,29 @@
     });
 
 
-    $('.datepicker').datepicker()
+    $('.datepicker').datepicker();
+
     $("#withmoney").hide();
     $("#switchmoney").click(function() {
-        if ($("#switchmoney").is(":checked"))
+        if ($("#switchmoney").is(":checked")) {
+            $(".card").css("height", $(".card").height() + 100);
             $("#withmoney").slideDown("fast");
-        else
+        }
+        else {
+            $(".card").css("height", $(".card").height() - 100);
             $("#withmoney").slideUp("fast");
+        }
     });
     $("#withtime").hide();
     $("#switchtime").click(function() {
-        if ($("#switchtime").is(":checked"))
+        if ($("#switchtime").is(":checked")) {
             $("#withtime").slideDown("fast");
-        else
+            $(".card").css("height",$(".card").height() + 150);
+        }
+        else {
             $("#withtime").slideUp("fast");
+            $(".card").css("height",$(".card").height() - 150);
+        }
     });
 
 </script>

@@ -2,19 +2,21 @@
 <?php include 'header.php'; ?>
 <body>
 <?php //include 'nav.php' ?>
-    <div class="container">
-                    <div class="card" id="card" >
+    <div class="container" style="margin-top: 10px">
+
+                    <div class="card" id="card" style="box-sizing: inherit" >
                         <div class="front">
                             <i  class="glyphicon glyphicon-indent-left pull-right flipme" ></i>
 
                                 <h2>Give A Ride</h2>
 
                             <div class="row">
-                                <div class="col-xs-9">
+                                <div class="col-xs-8">
                                     <label for="origin">Origin</label>
                                     <input type="text" name="origin" placeholder="Origin" class="form-control">
                                 </div>
-                                <div class="pull-right" style="margin-right: 10px">
+
+                                <div class="col-xs-3" style="margin-right: 10px">
                                     <div class="switch" style="margin-top: 27px ">
                                         <input id="switchmoney" name="pay" class="cmn-toggle cmn-toggle-round" type="checkbox">
                                         <label for="switchmoney"></label>
@@ -41,17 +43,17 @@
 
 
                             <div class="row">
-                                <div class="col-xs-12">
+                                <div class="col-xs-11">
                                     <label for="stops">stops</label>
                                     <input type="text" name="stops" placeholder="Stops" class="form-control">
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-xs-9">
+                                <div class="row">
+                                <div class="col-xs-8">
                                     <label for="destination">destination</label>
                                     <input type="text" name="destination" placeholder="Destination" class="form-control">
                                 </div>
-                                <div class="pull-right" style="margin-right: 10px">
+                                <div class="col-xs-3" style="margin-right: 10px">
                                     <div class="switch" style="margin-top: 27px ">
                                         <input id="switchtime" name="pay" class="cmn-toggle cmn-toggle-round" type="checkbox">
                                         <label for="switchtime"></label>
@@ -67,6 +69,8 @@
                                     <div class="datepicker" id="dateTime" data-date="12/03/2012"></div>
                                 </div>
                             </div>
+
+
                         </div>
 
                         <!-- Modal 1 -->
@@ -94,9 +98,10 @@
 
 
                         </div>
-                    </div>
 
-    </div>
+                    </div>
+        </div>
+
 
 
 <!---->
