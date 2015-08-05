@@ -6,6 +6,7 @@
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/jquery.flip.js"></script>
 <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="js/html5shiv.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
 
 
@@ -26,6 +27,20 @@
 
 
     $('.datepicker').datepicker()
+    $("#withmoney").hide();
+    $("#switchmoney").click(function() {
+        if ($("#switchmoney").is(":checked"))
+            $("#withmoney").slideDown("fast");
+        else
+            $("#withmoney").slideUp("fast");
+    });
+    $("#withtime").hide();
+    $("#switchtime").click(function() {
+        if ($("#switchtime").is(":checked"))
+            $("#withtime").slideDown("fast");
+        else
+            $("#withtime").slideUp("fast");
+    });
 
 </script>
 
