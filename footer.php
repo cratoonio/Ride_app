@@ -50,6 +50,17 @@
             $(".card").css("height",$(".card").height() - 150);
         }
     });
+    $("#withtime2").hide();
+    $("#switchtime2").click(function() {
+        if ($("#switchtime2").is(":checked")) {
+            $("#withtime2").slideDown("fast");
+            $(".card").css("height",$(".card").height() + 150);
+        }
+        else {
+            $("#withtime2").slideUp("fast");
+            $(".card").css("height",$(".card").height() - 150);
+        }
+    });
 
 </script>
 

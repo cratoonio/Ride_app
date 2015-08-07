@@ -1,14 +1,19 @@
 
 <?php include 'header.php'; ?>
 <body>
-<?php //include 'nav.php' ?>
-    <div class="container" style="margin-top: 10px">
 
+<?php //include 'nav.php' ?>
+    <div class="container" style="margin-top: 10px;">
+
+<!--        <img src="images/turbine.png"  class="img-responsive col-xs-10 col-xs-offset-2 text-center" style="position:fixed;top:22%;">-->
                     <div class="card" id="card" style="box-sizing: inherit" >
                         <div class="front">
-                            <i  class="glyphicon glyphicon-indent-left pull-right flipme" ></i>
 
-                                <h2>Give A Ride</h2>
+                                    <span>Give</span>
+                                <i  class="glyphicon glyphicon-indent-left pull-right flipme" ></i>
+
+
+
 
                             <div class="row">
                                 <div class="col-xs-8">
@@ -17,7 +22,7 @@
                                 </div>
 
                                 <div class="col-xs-3" style="margin-right: 10px">
-                                    <div class="switch" style="margin-top: 27px ">
+                                    <div class="switch" style="margin-top: 29px ">
                                         <input id="switchmoney" name="pay" class="cmn-toggle cmn-toggle-round" type="checkbox">
                                         <label for="switchmoney"></label>
                                     </div>
@@ -37,6 +42,8 @@
                                         <button type="button" class="btn btn-default">30</button>
                                         <button type="button" class="btn btn-default">35</button>
                                         <button type="button" class="btn btn-default">40</button>
+                                        <button type="button" class="btn btn-default">45</button>
+                                        <button type="button" class="btn btn-default">50</button>
                                     </div>
                                 </div>
                             </div>
@@ -54,7 +61,7 @@
                                     <input type="text" name="destination" placeholder="Destination" class="form-control">
                                 </div>
                                 <div class="col-xs-3" style="margin-right: 10px">
-                                    <div class="switch" style="margin-top: 27px ">
+                                    <div class="switch" style="margin-top: 29px ">
                                         <input id="switchtime" name="pay" class="cmn-toggle cmn-toggle-round" type="checkbox">
                                         <label for="switchtime"></label>
                                     </div>
@@ -64,7 +71,7 @@
                             <div id="withtime" class="row bg-success">
                                 <i class="glyphicon glyphicon-chevron-down pull-right" style="margin-right: 9%;color: #16A085;"></i>
 
-                                <div class="col-xs-12">
+                                <div class="col-xs-2">
                                     <label for="dateTime">Time</label>
                                     <div class="datepicker" id="dateTime" data-date="12/03/2012"></div>
                                 </div>
@@ -75,8 +82,9 @@
 
                         <!-- Modal 1 -->
                         <div class="back">
-                            <i  class="glyphicon glyphicon-indent-left pull-right flipme" ></i>
-                                <h2>Get A Ride</h2>
+                           <span style="color: aquamarine;font-weight: 500;font-size: x-large">Get</span>
+                           <i  class="glyphicon glyphicon-indent-left pull-right flipme" ></i>
+
                             <div class="row">
                                 <div class="col-xs-12">
                                     <label for="origin">Origin</label>
@@ -84,15 +92,23 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-xs-12">
+                                <div class="col-xs-8">
                                     <label for="destination">destination</label>
                                     <input type="text" name="destination" placeholder="Destination" class="form-control">
                                 </div>
+                                <div class="col-xs-3" style="margin-right: 10px">
+                                    <div class="switch2" style="margin-top: 29px ">
+                                        <input id="switchtime2" name="pay" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                                        <label for="switchtime2"></label>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <label for="datetime">Time</label>
-                                    <input type="datetime" id="datetime" name="dateTime" class="form-control">
+                            <div id="withtime2" class="row bg-success">
+                                <i class="glyphicon glyphicon-chevron-down pull-right" style="margin-right: 9%;color: #16A085;"></i>
+
+                                <div class="col-xs-2">
+                                    <label for="dateTime">Time</label>
+                                    <div class="datepicker" id="dateTime" data-date="12/03/2012"></div>
                                 </div>
                             </div>
 
