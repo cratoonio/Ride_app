@@ -5,8 +5,10 @@
 <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/jquery.flip.js"></script>
-<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
 <script type="text/javascript" src="js/html5shiv.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
+
+
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
 
 
@@ -25,8 +27,6 @@
         $("#card").flip('toggle');
     });
 
-
-    $('.datepicker').datepicker();
 
     $("#withmoney").hide();
     $("#switchmoney").click(function() {
@@ -50,6 +50,7 @@
             $(".card").css("height",$(".card").height() - 150);
         }
     });
+
     $("#withtime2").hide();
     $("#switchtime2").click(function() {
         if ($("#switchtime2").is(":checked")) {
@@ -61,7 +62,12 @@
             $(".card").css("height",$(".card").height() - 150);
         }
     });
-
+    $(function () {
+        $('#datetimepicker').datetimepicker({
+        });
+        $('#datetimepicker1').datetimepicker({
+        });
+    });
 </script>
 
 

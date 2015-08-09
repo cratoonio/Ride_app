@@ -98,5 +98,5 @@ input.cmn-toggle-round:checked + label:before {
   background-color: #8ce196;
 }
 input.cmn-toggle-round:checked + label:after {
-  margin-left: 50%;
+  margin-left: 49%;
 }

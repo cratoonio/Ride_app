@@ -903,7 +903,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #333;
+  color: #ffffff;
   background-color: #fff;
 }
 #myNav {
@@ -911,7 +911,6 @@ body {
   font-size: 125px;
   line-height: 1.42857143;
   color: #ffffff;
-
   font-weight: 700;
 }
 input,

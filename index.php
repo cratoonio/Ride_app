@@ -9,8 +9,8 @@
                     <div class="card" id="card" style="box-sizing: inherit" >
                         <div class="front">
 
-                                    <span>Give</span>
-                                <i  class="glyphicon glyphicon-indent-left pull-right flipme" ></i>
+                                    <span style="color: #ffffff;font-weight: 500;font-size: x-large">Give</span>
+                                <i  class="glyphicon glyphicon-indent-left pull-right flipme" style="font-size: x-large" ></i>
 
 
 
@@ -50,10 +50,14 @@
 
 
                             <div class="row">
-                                <div class="col-xs-11">
+                                <div class="col-xs-9">
                                     <label for="stops">stops</label>
                                     <input type="text" name="stops" placeholder="Stops" class="form-control">
                                 </div>
+                                    <i style="margin-top: 34px" class="glyphicon glyphicon-plus"></i>
+
+                                    <i style="margin-top: 34px" class="glyphicon glyphicon-minus"></i>
+
                             </div>
                                 <div class="row">
                                 <div class="col-xs-8">
@@ -61,20 +65,26 @@
                                     <input type="text" name="destination" placeholder="Destination" class="form-control">
                                 </div>
                                 <div class="col-xs-3" style="margin-right: 10px">
+
                                     <div class="switch" style="margin-top: 29px ">
                                         <input id="switchtime" name="pay" class="cmn-toggle cmn-toggle-round" type="checkbox">
                                         <label for="switchtime"></label>
                                     </div>
+
                                 </div>
 
                             </div>
-                            <div id="withtime" class="row bg-success">
-                                <i class="glyphicon glyphicon-chevron-down pull-right" style="margin-right: 9%;color: #16A085;"></i>
+                            <div id="withtime"  style="color: #16A085" class="row bg-success">
+<!--                                <i class="glyphicon glyphicon-chevron-down pull-right" style="margin-right: 9%;color: #16A085;"></i>-->
 
-                                <div class="col-xs-2">
-                                    <label for="dateTime">Time</label>
-                                    <div class="datepicker" id="dateTime" data-date="12/03/2012"></div>
-                                </div>
+                                    <div class="container">
+                                        <div id="datetimepicker"></div>
+
+                                    </div>
+
+
+
+
                             </div>
 
 
@@ -82,8 +92,8 @@
 
                         <!-- Modal 1 -->
                         <div class="back">
-                           <span style="color: aquamarine;font-weight: 500;font-size: x-large">Get</span>
-                           <i  class="glyphicon glyphicon-indent-left pull-right flipme" ></i>
+                           <span style="color: #ffffff;font-weight: 500;font-size: x-large">Get</span>
+                           <i  class="glyphicon glyphicon-indent-left pull-right flipme" style="font-size: x-large" ></i>
 
                             <div class="row">
                                 <div class="col-xs-12">
@@ -103,13 +113,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="withtime2" class="row bg-success">
+                            <div id="withtime2" style="color: #16A085" class="row bg-success">
                                 <i class="glyphicon glyphicon-chevron-down pull-right" style="margin-right: 9%;color: #16A085;"></i>
 
                                 <div class="col-xs-2">
                                     <label for="dateTime">Time</label>
-                                    <div class="datepicker" id="dateTime" data-date="12/03/2012"></div>
-                                </div>
+                                    <div id="datetimepicker1"></div>
+
                             </div>
 
 
