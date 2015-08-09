@@ -68,6 +68,15 @@
         $('#datetimepicker1').datetimepicker({
         });
     });
+    var i = 1;
+    $('#addstop').click(function(){
+        if(i==3){alert("you dont need more stops")}
+        else {
+            $(".card").css("height",$(".card").height() + 20);
+            $('#stops').append(" <input type=\"text\" name=\"stops"+i+ "\" placeholder=\"Stops\" class=\"form-control input-sm\">");
+            i++;
+        }
+    });
 </script>
 
 

@@ -9,12 +9,8 @@
                     <div class="card" id="card" style="box-sizing: inherit" >
                         <div class="front">
 
-                                    <span style="color: #ffffff;font-weight: 500;font-size: x-large">Give</span>
+                                    <span style="color: #ffffff;font-weight: 900;font-size: x-large">Give</span>
                                 <i  class="glyphicon glyphicon-indent-left pull-right flipme" style="font-size: x-large" ></i>
-
-
-
-
                             <div class="row">
                                 <div class="col-xs-8">
                                     <label for="origin">Origin</label>
@@ -50,13 +46,13 @@
 
 
                             <div class="row">
-                                <div class="col-xs-9">
+                                <div id="stops" class="col-xs-9">
                                     <label for="stops">stops</label>
                                     <input type="text" name="stops" placeholder="Stops" class="form-control">
                                 </div>
-                                    <i style="margin-top: 34px" class="glyphicon glyphicon-plus"></i>
-
-                                    <i style="margin-top: 34px" class="glyphicon glyphicon-minus"></i>
+                                <div class="col-xs-1">
+                                    <i style="background-color: #DFF0D8;color:#16A085 ; margin-top: 28px" id="addstop" class="btn-default  btn btn-sm glyphicon glyphicon-plus"></i>
+                                </div>
 
                             </div>
                                 <div class="row">
@@ -75,10 +71,9 @@
 
                             </div>
                             <div id="withtime"  style="color: #16A085" class="row bg-success">
-<!--                                <i class="glyphicon glyphicon-chevron-down pull-right" style="margin-right: 9%;color: #16A085;"></i>-->
 
                                     <div class="container">
-                                        <div id="datetimepicker"></div>
+                                        <div class="col-xs-offset-2" id="datetimepicker"></div>
 
                                     </div>
 
@@ -92,7 +87,7 @@
 
                         <!-- Modal 1 -->
                         <div class="back">
-                           <span style="color: #ffffff;font-weight: 500;font-size: x-large">Get</span>
+                           <span style="color: #ffffff;font-weight: 900;font-size: x-large">Get</span>
                            <i  class="glyphicon glyphicon-indent-left pull-right flipme" style="font-size: x-large" ></i>
 
                             <div class="row">
