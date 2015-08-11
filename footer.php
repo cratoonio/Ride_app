@@ -6,6 +6,12 @@
 <script type="text/javascript" src="js/jquery.flip.js"></script>
 <script type="text/javascript" src="js/html5shiv.min.js"></script>
 <script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-touch.min.js"></script>
+<script src="js/libs/angucomplete-alt.js"></script>
+<script src="js/app.js"></script>
+
+<script src="js/app.js"></script>
 
 
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
@@ -51,6 +57,8 @@
     });
 
     $("#withtime2").hide();
+    $("#stop2").hide();
+    $("#stop3").hide();
     $("#switchtime2").click(function () {
         if ($("#switchtime2").is(":checked")) {
             $("#withtime2").slideDown("fast");
@@ -67,7 +75,7 @@
     });
     var i = 2;
     $('#addstop').click(function () {
-        if (i == 20) {
+        if (i == 4) {
             alert("you dont need more stops")
         }
         else {
@@ -76,6 +84,7 @@
             i++;
         }
     });
+
 </script>
 
 

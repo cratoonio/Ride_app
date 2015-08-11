@@ -1,5 +1,5 @@
 <?php include 'header.php'; ?>
-<body>
+<body ng-controller="MainController">
 
 <?php //include 'nav.php' ?>
 <div class="container" style="margin-top: 10px;">
@@ -13,7 +13,7 @@
             <div class="row">
                 <div class="col-xs-8">
                     <label for="origin">Origin</label>
-                    <input type="text" name="origin" placeholder="Origin" class="form-control form-control-green">
+                    <div angucomplete-alt id="ex1" input-name="origin" placeholder="Origin" maxlength="50" pause="100"  local-data="locations" search-fields="settlement" title-field="settlement" minlength="1" input-class="form-control input-sm form-control-green" match-class="highlight"></div>
                 </div>
 
                 <div class="col-xs-3 " style="margin-right: 10px">
@@ -45,15 +45,14 @@
                     </div>
                 </div>
             </div>
-
-
-            <div class="row">
+         <div class="row">
                 <div id="stops" class="col-xs-8">
                     <label for="stops">Stops</label>
-                    <input type="text" name="stops" placeholder="Stop" class="form-control form-control-green">
+                    <div angucomplete-alt id="ex1" input-name="stops" placeholder="Stops" maxlength="50" pause="100" selected-object="selectedCountry" local-data="locations" search-fields="settlement" title-field="settlement" minlength="1" input-class="form-control input-sm form-control-green" match-class="highlight"></div>
+                    
                 </div>
                 <div class="col-xs-1">
-                    <i style="background-color: #Ffffff;color:#16A085 ; margin-top: 28px" id="addstop"
+                    <i style="background-color: #Ffffff;color:#16A085 ; margin-top: 27px" id="addstop"
                        class="btn-default  btn btn-sm glyphicon glyphicon-plus"></i>
                 </div>
 
@@ -62,7 +61,7 @@
 
                 <div class="col-xs-8">
                     <label for="destination">Destination</label>
-                    <input type="text" name="destination" placeholder="Destination" class="form-control form-control-green">
+                    <div angucomplete-alt id="ex1" input-name="destination"  placeholder="Destination" maxlength="50" pause="100" selected-object="selectedCountry" local-data="locations" search-fields="settlement" title-field="settlement" minlength="1" input-class="form-control input-sm form-control-green" match-class="highlight"></div>
                 </div>
                 <div class="col-xs-3 " style="margin-right: 10px">
                     <label>Time</label>
@@ -95,18 +94,19 @@
             <i class="glyphicon glyphicon-indent-left pull-right flipme" style="font-size: x-large"></i>
 
             <div class="row">
-                <div class="col-xs-12">
+                <div class="col-xs-8">
                     <label for="origin">Origin</label>
-                    <input type="text" name="origin" placeholder="Origin" class="form-control form-control-green">
+                    <div angucomplete-alt id="ex1" input-name="origen" placeholder="Origin" maxlength="50" pause="100" selected-object="selectedCountry" local-data="locations" search-fields="settlement" title-field="settlement" minlength="1" input-class="form-control input-sm form-control-green" match-class="highlight"></div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-8">
                     <label for="destination">destination</label>
-                    <input type="text" name="destination" placeholder="Destination" class="form-control form-control-green">
+                    <div angucomplete-alt id="ex1" input-name="destination" placeholder="Destination" maxlength="50" pause="100" selected-object="selectedCountry" local-data="locations" search-fields="settlement" title-field="settlement" minlength="1" input-class="form-control input-sm form-control-green" match-class="highlight"></div>
                 </div>
                 <div class="col-xs-3" style="margin-right: 10px">
-                    <div class="switch2" style="margin-top: 29px ">
+                    <label>Time</label>
+                    <div class="switch2" style="margin-top: 3px ">
                         <input id="switchtime2" name="pay" class="cmn-toggle cmn-toggle-round" type="checkbox">
                         <label for="switchtime2"></label>
                     </div>
@@ -115,8 +115,7 @@
             <div id="withtime2" style="color: #16A085" class="row bg-success">
                 <i class="glyphicon glyphicon-chevron-down pull-right" style="margin-right: 9%;color: #16A085;"></i>
 
-                <div class="col-xs-offset-2"
-                " id="datetimepicker1">
+                <div class="col-xs-offset-2" id="datetimepicker1">
             </div>
         </div>
 

@@ -6,7 +6,7 @@
 <!--[if IE 8]>
 <html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang=""> <!--<![endif]-->
+<html class="no-js" id="ng-app" ng-app="app"><!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -19,6 +19,9 @@
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/switches.css">
     <link rel="stylesheet" href="css/bootstrap-datetimepicker.css">
+    <link rel="stylesheet" href="css/structure.css"/>
+    <link rel="stylesheet" href="css/angucomplete-alt.css"/>
+    <link rel="stylesheet" href="fonts/bariol/bariol.css"/>
 
     <style>
 
