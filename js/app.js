@@ -6,10 +6,6 @@ app.controller('MainController', ['$scope', '$http',
       return {q: str};
     };
 
-    $scope.countrySelected = function(selected) {
-      window.alert('You have selected ' + selected.title);
-    };
-
     $scope.locations = [
       {settlement:"אבו ג'ווייעד ",council:" ",town:"באר שבע",region:"דרום"},
       {settlement:"אבו גוש",council:" ",town:"ירושלים",region:"ירושלים והסביבה"},
@@ -396,7 +392,7 @@ app.controller('MainController', ['$scope', '$http',
       {settlement:"הושעיה",council:"עמק יזרעאל",town:"עפולה",region:"צפון (מזרחי)"},
       {settlement:"הזורע",council:"מגידו",town:"עפולה",region:"צפון (מזרחי)"},
       {settlement:"הזורעים",council:"הגליל התחתון",town:"טבריה",region:"צפון (מזרחי)"},
-      {settlement:"החותרים",council:"חוף הכרמל",town:"חדרה",region:"חיפה והסביבה"},
+      {settlement:"החותרים",council:"חוף הכרמל",town:"חיפה",region:"חיפה והסביבה"},
       {settlement:"היוגב",council:"עמק יזרעאל",town:"עפולה",region:"צפון (מזרחי)"},
       {settlement:"הילה",council:"מעלה יוסף",town:"עכו",region:"צפון (מזרחי)"},
       {settlement:"המעפיל",council:"עמק חפר",town:"חדרה",region:"השרון"},

@@ -11,8 +11,6 @@
 <script src="js/libs/angucomplete-alt.js"></script>
 <script src="js/app.js"></script>
 
-<script src="js/app.js"></script>
-
 
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
 
@@ -33,7 +31,6 @@
     });
 
 
-    $("#withmoney").hide();
     $("#switchmoney").click(function () {
         if ($("#switchmoney").is(":checked")) {
             $(".card").css("height", $(".card").height() + 100);
@@ -44,7 +41,7 @@
             $("#withmoney").slideUp("fast");
         }
     });
-    $("#withtime").hide();
+
     $("#switchtime").click(function () {
         if ($("#switchtime").is(":checked")) {
             $("#withtime").slideDown("fast");
@@ -56,7 +53,7 @@
         }
     });
 
-    $("#withtime2").hide();
+
     $("#stop2").hide();
     $("#stop3").hide();
     $("#switchtime2").click(function () {

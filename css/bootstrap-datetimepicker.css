@@ -385,7 +385,7 @@
 }
 
 .datetimepicker th span.glyphicon {
-    pointer-events: none;
+    pointer-events:none;
 }
 
 .datetimepicker thead tr:first-child th,
