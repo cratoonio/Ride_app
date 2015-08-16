@@ -11,16 +11,14 @@
             <span class="fa fa-bars flipme pull-right"></span>
             </h3>
 
-
-
             <div class="row">
                 <div class="col-xs-8">
                     <label for="origin">Origin</label>
-                    <div angucomplete-alt id="ex1" input-name="origin" placeholder="Origin" maxlength="50" pause="100"  local-data="locations" search-fields="settlement,council,town" title-field="settlement" minlength="1" input-class="form-control input-sm form-control-green" match-class="highlight"></div>
+                    <div angucomplete-alt id="ex1" input-name="origin" placeholder="Origin" maxlength="50" pause="100"  local-data="locations" search-fields="settlement,council,town" title-field="settlement" minlength="1" input-class="form-control input-sm form-control-green" match-class="highlight" ></div>
                 </div>
 
-                <div class="col-xs-offset-8">
-                    <label>Money&Terms</label>
+                <div class="col-xs-3">
+                    <label>Terms</label>
 
                     <div class="switch">
                         <input id="switchmoney" name="pay" class="cmn-toggle cmn-toggle-round" type="checkbox">
@@ -30,10 +28,10 @@
 
             </div>
             <div id="withmoney" class="row bg-success" style="display: none">
-<!--                <i class="pull-right fa fa-get-pocket green" style="top: 120px;right: 50%;position: fixed; font-size: large;"></i>-->
+
 
                 <div class="col-xs-12 ">
-                        <h5 class="green">Money</h5>
+                    <h5 class="green">Money</h5>
                         <div class="btn-group" data-toggle="buttons">
                             <label class="btn btn-success active">
                                 <input type="radio" name="options" id="option1" autocomplete="off" checked>0</label>
@@ -66,7 +64,7 @@
                         <div class="btn-group" data-toggle="buttons">
                             <label class="btn btn-success">
                                 <input type="checkbox" autocomplete="off" checked>Pet Friendly</label>
-                            <label class="btn btn-success active">
+                            <label class="btn btn-success ">
                                 <input type="checkbox" autocomplete="off">No A/C</label>
                             <label class="btn btn-success">
                                 <input type="checkbox" autocomplete="off">Careful Driver</label>
@@ -77,12 +75,13 @@
             </div>
          <div class="row">
                 <div id="stops" class="col-xs-8">
-                    <label for="stops">Stops</label>
+                    </i> <label for="stops">Stops</label>
                     <div angucomplete-alt id="ex1" input-name="stops" placeholder="Stops" maxlength="50" pause="100" selected-object="selectedCountry" local-data="locations" search-fields="settlement" title-field="settlement" minlength="1" input-class="form-control input-sm form-control-green" match-class="highlight"></div>
                     
                 </div>
                 <div class="col-xs-offset-8">
-                    <i id="addstop" class="btn-default  btn btn-sm glyphicon glyphicon-plus flippage"></i>
+
+                        <i id="addstop" class="fa fa-plus-circle btn` btn-sm flipPage"></i>
                 </div>
 
             </div>
@@ -90,9 +89,10 @@
 
                 <div class="col-xs-8">
                     <label for="destination">Destination</label>
+
                     <div angucomplete-alt id="ex1" input-name="destination"  placeholder="Destination" maxlength="50" pause="100" selected-object="selectedCountry" local-data="locations" search-fields="settlement" title-field="settlement" minlength="1" input-class="form-control input-sm form-control-green" match-class="highlight"></div>
                 </div>
-                <div class="col-xs-offset-8">
+                <div class="col-xs-3">
                     <label>Time</label>
 
                     <div class="switch">
@@ -115,11 +115,11 @@
                             <label class="btn btn-success active">
                                 <input type="radio" name="date" id="Today" autocomplete="off" checked >Today</label>
                             <label class="btn btn-success">
-                                <input type="radio" name="date" id="Tomorrow" autocomplete="off">Tomorrow</i> </label>
+                                <input type="radio" name="date" id="Tomorrow" autocomplete="off">Tomorrow </label>
                             <label class="btn btn-success">
-                                <input type="radio" name="date" id="2days" autocomplete="off">In 2 day's</i> </label>
+                                <input type="radio" name="date" id="2days" autocomplete="off">In 2 day's </label>
                             <label class="btn btn-success">
-                                <input type="radio" name="date" id="Periodic" autocomplete="off">Periodic</i> </label>
+                                <input type="radio" name="date" id="Periodic" autocomplete="off">Periodic</label>
 
                         </div>
                         <div class="divider"></div>
@@ -139,41 +139,44 @@
 
             </div>
             <div class="row">
-                <div class="col-xs-4">
-                    <label for="name">Name</label>
-                    <input type="text" name="name" placeholder="Name">
-                </div>
-                <div class="col-xs-4">
-                    <label for="phone">Phone</label>
-                    <input type="text" name="phone" placeholder="Phone">
+                <div class="col-xs-9">
+                    <div class="col-xs-6">
+                        <i class="fa fa-user"></i> <label for="name">  Name</label>
+                    <input type="text" class="form-control-green" name="name" placeholder="Name">
+                    </div>
+                    <div class="col-xs-6">
+                    <i class="fa fa-android"></i> / <i class="fa fa-trash-o"></i> <label for="phone"> Phone</label>
+                    <input type="number" name="phone" placeholder="Phone" required="mast enter phone">
+                    </div>
+
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-11">
-                    <label for="remarks">Remarks</label>
-                    <textarea class="form-control" placeholder="Enter any edition information..."  data-toggle="tooltip"
+                     <label for="remarks">Remarks</label>
+                    <textarea class="form-control form-control-green" placeholder="Enter any edition information..."  data-toggle="tooltip"
                               title="Please enter any information regarding the trip" data-placement="bottom"  name="remarks" ></textarea>
                 </div>
             </div>
 
+            <button type="submit" name="submit" class="text-center btn btn-default logo">Go!</button>
         </form>
-
 
     </div>
 
         <!-- Modal 1 -->
-    <form method="post" action="">
+
         <div class="back">
 
             <h3 class="center-block text-center">
-                <span class="flipheader pull-left">Get</span>
+                <span class="flipHeader pull-left">Get</span>
                 <span class="logo" data-toggle="modal" data-target="#myModal">Grasshoppers</span>
                 <span class="fa fa-bars flipme pull-right"></span>
             </h3>
             <div class="row">
                 <div class="col-xs-8">
                     <label for="origin">Origin</label>
-                    <div angucomplete-alt id="ex1" input-name="origen" placeholder="Origin" maxlength="50" pause="100" selected-object="selectedCountry" local-data="locations" search-fields="settlement" title-field="settlement" minlength="1" input-class="form-control input-sm form-control-green" match-class="highlight"></div>
+                    <div angucomplete-alt id="ex1" input-name="origin" placeholder="Origin" maxlength="50" pause="100" selected-object="selectedCountry" local-data="locations" search-fields="settlement" title-field="settlement" minlength="1" input-class="form-control input-sm form-control-green" match-class="highlight"></div>
                 </div>
             </div>
             <div class="row">
@@ -181,27 +184,26 @@
                     <label for="destination">destination</label>
                     <div angucomplete-alt id="ex1" input-name="destination" placeholder="Destination" maxlength="50" pause="100" selected-object="selectedCountry" local-data="locations" search-fields="settlement" title-field="settlement" minlength="1" input-class="form-control input-sm form-control-green" match-class="highlight"></div>
                 </div>
-                <div class="col-xs-offset-8">
-                    <label>Time</label>
+                <div class="col-xs-3    ">
+                        <label>Time</label>
                     <div class="switch">
-                        <input id="switchtime2" name="pay" class="cmn-toggle cmn-toggle-round" type="checkbox">
-                        <label for="switchtime2"></label>
+                        <input id="switchTime2" name="pay" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                        <label for="switchTime2"></label>
                     </div>
                 </div>
             </div>
-            <div id="withtime2" class="row bg-success" style="display:none">
-<!--                <i class="pull-right fa fa-get-pocket green" style="top: 192px;right: 50%;position: fixed; font-size: large;"></i>-->
+            <div id="withTime2" class="row bg-success" style="display:none">
                 <div class="col-xs-12 ">
                     <h5 class="green">Money</h5>
                     <div class="btn-group" data-toggle="buttons">
                         <label class="btn btn-success active">
                             <input type="radio" name="date" id="Today" autocomplete="off" checked >Today</label>
                         <label class="btn btn-success">
-                            <input type="radio" name="date" id="Tomorrow" autocomplete="off">Tomorrow</i> </label>
+                            <input type="radio" name="date" id="Tomorrow" autocomplete="off">Tomorrow</label>
                         <label class="btn btn-success">
-                            <input type="radio" name="date" id="2days" autocomplete="off">In 2 day's</i> </label>
+                            <input type="radio" name="date" id="2days" autocomplete="off">In 2 day's </label>
                         <label class="btn btn-success">
-                            <input type="radio" name="date" id="Periodic" autocomplete="off">Periodic</i> </label>
+                            <input type="radio" name="date" id="Periodic" autocomplete="off">Periodic </label>
 
                     </div>
                     <div class="divider"></div>
@@ -220,9 +222,9 @@
         </div>
 
     </div>
-    </form>
-</div>
 
+
+<!--complaint modal -->
 
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
@@ -234,7 +236,8 @@
                 <div style="color: #000000" class="modal-body">
                     <p>Got any remarks? Think we just have to change something?
                        Write up anything on your mind.</p> <small>if you have a request it would nice be if you can add a name so we know you're a real person.</small>
-                    <textarea rows="7" cols="50" class="form-control" ></textarea>
+                    <label for="complaints">
+                    <textarea rows="7" cols="50" name="complaints" class="form-control"></textarea></label>
                     <small>nude pictures are welcome (from female users ;)</small>
                 </div>
                 <div  style="color: #000000; height: 75px" class="modal-footer">

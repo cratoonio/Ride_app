@@ -32,11 +32,11 @@
 
     $("#switchmoney").click(function () {
         if ($("#switchmoney").is(":checked")) {
-            $(".card").css("height", $(".card").height() + 200);
+            $(".card").css("height", $(".card").height() + 230);
             $("#withmoney").slideDown("fast");
         }
         else {
-            $(".card").css("height", $(".card").height() - 200);
+            $(".card").css("height", $(".card").height() - 230);
             $("#withmoney").slideUp("fast");
         }
     });
@@ -60,13 +60,13 @@
 
     $("#stop2").hide();
     $("#stop3").hide();
-    $("#switchtime2").click(function () {
-        if ($("#switchtime2").is(":checked")) {
-            $("#withtime2").slideDown("fast");
+    $("#switchTime2").click(function () {
+        if ($("#switchTime2").is(":checked")) {
+            $("#withTime2").slideDown("fast");
             $(".card").css("height", $(".card").height() + 150);
         }
         else {
-            $("#withtime2").slideUp("fast");
+            $("#withTime2").slideUp("fast");
             $(".card").css("height", $(".card").height() - 150);
         }
     });
