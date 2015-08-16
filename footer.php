@@ -5,7 +5,6 @@
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/jquery.flip.js"></script>
 <script type="text/javascript" src="js/html5shiv.min.js"></script>
-<script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-touch.min.js"></script>
 <script src="js/libs/angucomplete-alt.js"></script>
@@ -33,11 +32,11 @@
 
     $("#switchmoney").click(function () {
         if ($("#switchmoney").is(":checked")) {
-            $(".card").css("height", $(".card").height() + 100);
+            $(".card").css("height", $(".card").height() + 200);
             $("#withmoney").slideDown("fast");
         }
         else {
-            $(".card").css("height", $(".card").height() - 100);
+            $(".card").css("height", $(".card").height() - 200);
             $("#withmoney").slideUp("fast");
         }
     });
@@ -45,13 +44,18 @@
     $("#switchtime").click(function () {
         if ($("#switchtime").is(":checked")) {
             $("#withtime").slideDown("fast");
-            $(".card").css("height", $(".card").height() + 150);
+            $(".card").css("height", $(".card").height() + 250);
         }
         else {
             $("#withtime").slideUp("fast");
-            $(".card").css("height", $(".card").height() - 150);
+            $(".card").css("height", $(".card").height() - 250);
         }
     });
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+
+
+    })
 
 
     $("#stop2").hide();
@@ -66,10 +70,7 @@
             $(".card").css("height", $(".card").height() - 150);
         }
     });
-    $(function () {
-        $('#datetimepicker').datetimepicker({});
-        $('#datetimepicker1').datetimepicker({});
-    });
+
     var i = 2;
     $('#addstop').click(function () {
         if (i == 4) {

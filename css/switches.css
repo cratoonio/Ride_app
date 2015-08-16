@@ -52,7 +52,7 @@
 ============================================================ */
 input.cmn-toggle-round + label {
     padding: 2px;
-    width: 65px;
+    width: 63px;
     height: 30px;
     background-color: #dddddd;
     -webkit-border-radius: 60px;
@@ -102,7 +102,7 @@ input.cmn-toggle-round + label:after {
 }
 
 input.cmn-toggle-round:checked + label:before {
-    background-color: #8ce196;
+    background-color: #DFF0D8;
 }
 
 input.cmn-toggle-round:checked + label:after {

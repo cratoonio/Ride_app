@@ -18,10 +18,10 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/switches.css">
-    <link rel="stylesheet" href="css/bootstrap-datetimepicker.css">
     <link rel="stylesheet" href="css/structure.css"/>
     <link rel="stylesheet" href="css/angucomplete-alt.css"/>
     <link rel="stylesheet" href="fonts/bariol/bariol.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
 
     <style>
 
@@ -32,3 +32,4 @@
     <script type="javascript" src="js/jquery-1.11.3.min.js"></script>
 </head>
 
+<body ng-controller="MainController">

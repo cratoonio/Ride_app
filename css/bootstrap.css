@@ -3599,7 +3599,7 @@ fieldset[disabled] .btn-primary.active {
 
 .btn-success {
     color: #fff;
-    background-color: #5cb85c;
+    background-color: #16A085;
     border-color: #4cae4c;
 }
 
@@ -3638,7 +3638,7 @@ fieldset[disabled] .btn-success:active,
 .btn-success.disabled.active,
 .btn-success[disabled].active,
 fieldset[disabled] .btn-success.active {
-    background-color: #5cb85c;
+    background-color: #449d44;
     border-color: #4cae4c;
 }
 
