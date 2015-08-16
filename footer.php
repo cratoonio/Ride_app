@@ -25,35 +25,34 @@
     });
 
 
-    $(".flipme").click(function () {
+    $(".flipMe").click(function () {
         $("#card").flip('toggle');
     });
 
 
-    $("#switchmoney").click(function () {
-        if ($("#switchmoney").is(":checked")) {
-            $(".card").css("height", $(".card").height() + 230);
-            $("#withmoney").slideDown("fast");
+    $("#switchMoney").click(function () {
+        if ($("#switchMoney").is(":checked")) {
+            $(".card").css("height", $(".card").height() + 250);
+            $("#withMoney").slideDown("fast");
         }
         else {
-            $(".card").css("height", $(".card").height() - 230);
-            $("#withmoney").slideUp("fast");
+            $(".card").css("height", $(".card").height() - 250);
+            $("#withMoney").slideUp("fast");
         }
     });
 
-    $("#switchtime").click(function () {
-        if ($("#switchtime").is(":checked")) {
-            $("#withtime").slideDown("fast");
+    $("#switchTime").click(function () {
+        if ($("#switchTime").is(":checked")) {
+            $("#withTime").slideDown("fast");
             $(".card").css("height", $(".card").height() + 250);
         }
         else {
-            $("#withtime").slideUp("fast");
+            $("#withTime").slideUp("fast");
             $(".card").css("height", $(".card").height() - 250);
         }
     });
     $(function () {
         $('[data-toggle="tooltip"]').tooltip();
-
 
     })
 
@@ -74,7 +73,7 @@
     var i = 2;
     $('#addstop').click(function () {
         if (i == 4) {
-            alert("you dont need more stops")
+            alert("you don't need more stops")
         }
         else {
             $(".card").css("height", $(".card").height() + 40);

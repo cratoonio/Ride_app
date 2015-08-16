@@ -1,14 +1,14 @@
 <?php include 'header.php'; ?>
 
-<div class="container" style="margin-top: 10px;">
+<div class="container" style="padding: 3px;">
 
     <div class="card" id="card" >
-        <form method="post" action="">
+        <form method="post" action="give.php">
         <div class="front">
             <h3 class="center-block text-center">
-            <span class="flipheader pull-left">Give</span>
-            <span class="logo" data-toggle="modal" data-target="#myModal">Grasshoppers</span>
-            <span class="fa fa-bars flipme pull-right"></span>
+                <span class="flipHeader pull-left">Give</span>
+                <span class="logo" data-toggle="modal" data-target="#myModal">Grasshoppers</span>
+                <span class="fa fa-bars flipMe pull-right"></span>
             </h3>
 
             <div class="row">
@@ -19,57 +19,55 @@
 
                 <div class="col-xs-3">
                     <label>Terms</label>
-
                     <div class="switch">
-                        <input id="switchmoney" name="pay" class="cmn-toggle cmn-toggle-round" type="checkbox">
-                        <label for="switchmoney"></label>
+                        <input id="switchMoney" name="withTerms" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                        <label for="switchMoney"></label>
                     </div>
                 </div>
 
             </div>
-            <div id="withmoney" class="row bg-success" style="display: none">
+            <div id="withMoney" class="row bg-success" style="display: none">
 
 
                 <div class="col-xs-12 ">
                     <h5 class="green">Money</h5>
                         <div class="btn-group" data-toggle="buttons">
-                            <label class="btn btn-success active">
-                                <input type="radio" name="options" id="option1" autocomplete="off" checked>0</label>
-                            <label class="btn btn-success">
-                                <input type="radio" name="options" id="option2" autocomplete="off">5 <i class="fa fa-ils" style="font-size: 11px;"></i> </label>
-                            <label class="btn btn-success">
-                                <input type="radio" name="options" id="option2" autocomplete="off">10 <i class="fa fa-ils" style="font-size: 11px;"></i> </label>
-                            <label class="btn btn-success">
-                                <input type="radio" name="options" id="option2" autocomplete="off">15 <i class="fa fa-ils" style="font-size: 11px;"></i> </label>
-                            <label class="btn btn-success">
-                                <input type="radio" name="options" id="option2" autocomplete="off">20 <i class="fa fa-ils" style="font-size: 11px;"></i> </label>
-                            <label class="btn btn-success">
-                                <input type="radio" name="options" id="option2" autocomplete="off">25 <i class="fa fa-ils" style="font-size: 11px;"></i> </label>
-                            <label class="btn btn-success">
-                                <input type="radio" name="options" id="option2" autocomplete="off">30 <i class="fa fa-ils" style="font-size: 11px;"></i> </label>
-                            <label class="btn btn-success">
-                                <input type="radio" name="options" id="option2" autocomplete="off">35 <i class="fa fa-ils" style="font-size: 11px;"></i> </label>
-                            <label class="btn btn-success">
-                                <input type="radio" name="options" id="option2" autocomplete="off">40 <i class="fa fa-ils" style="font-size: 11px;"></i> </label>
-                            <label class="btn btn-success">
-                                <input type="radio" name="options" id="option2" autocomplete="off">45 <i class="fa fa-ils" style="font-size: 11px;"></i> </label>
-                            <label class="btn btn-success">
-                                <input type="radio" name="options" id="option2" autocomplete="off">50 <i class="fa fa-ils" style="font-size: 11px;"></i> </label>
-                            <label class="btn btn-success">
-                                <input type="radio" name="options" id="option2" autocomplete="off">Food</label>
-
+<!--                            <label for="0" class="btn btn-success">-->
+<!--                                <input type="radio" name="price[1]" value="0" autocomplete="off">0</label>-->
+                            <label for="5" class="btn btn-success">
+                                <input type="radio" name="price[2]" value="5" autocomplete="off">5 <i class="fa fa-ils" style="font-size: 11px;"></i> </label>
+                            <label for="10" class="btn btn-success">
+                                <input type="radio" name="price[3]" value="10" autocomplete="off">10 <i class="fa fa-ils" style="font-size: 11px;"></i> </label>
+                            <label for="15" class="btn btn-success">
+                                <input type="radio" name="price[4]" value="15" autocomplete="off">15 <i class="fa fa-ils" style="font-size: 11px;"></i> </label>
+                            <label for="20" class="btn btn-success">
+                                <input type="radio" name="price[5]" value="20" autocomplete="off">20 <i class="fa fa-ils" style="font-size: 11px;"></i> </label>
+                            <label for="25" class="btn btn-success">
+                                <input type="radio" name="price[6]" value="25" autocomplete="off">25 <i class="fa fa-ils" style="font-size: 11px;"></i> </label>
+                            <label for="30" class="btn btn-success">
+                                <input type="radio" name="price[7]" value="30" autocomplete="off">30 <i class="fa fa-ils" style="font-size: 11px;"></i> </label>
+                            <label for="30" class="btn btn-success">
+                                <input type="radio" name="price[8]" value="35" autocomplete="off">35 <i class="fa fa-ils" style="font-size: 11px;"></i> </label>
+                            <label for="35" class="btn btn-success">
+                                <input type="radio" name="price[9]" value="40" autocomplete="off">40 <i class="fa fa-ils" style="font-size: 11px;"></i> </label>
+                            <label for="40" class="btn btn-success">
+                                <input type="radio" name="price[10]" value="45" autocomplete="off">45 <i class="fa fa-ils" style="font-size: 11px;"></i> </label>
+                            <label for="45" class="btn btn-success">
+                                <input type="radio" name="price[11]" value="50" autocomplete="off">50 <i class="fa fa-ils" style="font-size: 11px;"></i> </label>
+                            <label for="50" class="btn btn-success">
+                                <input type="radio" name="price[12]" value="food" autocomplete="off">Food</label>
                         </div>
                         <div class="divider"></div>
                         <h5 class="green">Terms</h5>
                         <div class="btn-group" data-toggle="buttons">
                             <label class="btn btn-success">
-                                <input type="checkbox" autocomplete="off" checked>Pet Friendly</label>
+                                <input type="checkbox" name="petFriendly" autocomplete="off">Pet Friendly</label>
                             <label class="btn btn-success ">
-                                <input type="checkbox" autocomplete="off">No A/C</label>
+                                <input type="checkbox" name="noAC" autocomplete="off">No A/C</label>
                             <label class="btn btn-success">
-                                <input type="checkbox" autocomplete="off">Careful Driver</label>
+                                <input type="checkbox" name="carefulDriver" autocomplete="off">Careful Driver</label>
                             <label class="btn btn-success">
-                                <input type="checkbox" autocomplete="off">Food</label>
+                                <input type="checkbox" name="food" autocomplete="off">Food</label>
                         </div>
                 </div>
             </div>
@@ -97,40 +95,37 @@
 
                     <div class="switch">
 
-                        <input id="switchtime" name="pay" class="cmn-toggle cmn-toggle-round " type="checkbox">
-                        <label for="switchtime" class=""></label>
+                        <input id="switchTime" name="giveTime" class="cmn-toggle cmn-toggle-round " type="checkbox">
+                        <label for="switchTime" class=""></label>
                     </div>
 
                 </div>
 
             </div>
-                <div id="withtime" class="row bg-success" style="display: none">
-
-
-<!--                    <i class="pull-right fa fa-get-pocket green" id="arrow" style="top: 269px;right: 50%;position: fixed; font-size: large;"></i>-->
+                <div id="withTime" class="row bg-success" style="display: none">
 
                     <div class="col-xs-12 ">
-                        <h5 class="green">Money</h5>
+                        <h5 class="green">Time</h5>
                         <div class="btn-group" data-toggle="buttons">
                             <label class="btn btn-success active">
-                                <input type="radio" name="date" id="Today" autocomplete="off" checked >Today</label>
+                                <input type="radio"  name="date[0]" value="<?php echo date("d/m/Y") ?>" id="Today" autocomplete="off">Today</label>
                             <label class="btn btn-success">
-                                <input type="radio" name="date" id="Tomorrow" autocomplete="off">Tomorrow </label>
+                                <input type="radio"  name="date[2]" value="<?php  echo date("d/m/Y", strtotime("+1 days")) ?>" id="Tomorrow" autocomplete="off">Tomorrow </label>
                             <label class="btn btn-success">
-                                <input type="radio" name="date" id="2days" autocomplete="off">In 2 day's </label>
+                                <input type="radio" name="date[3]" value="<?php  echo date("d/m/Y", strtotime("+2 days")) ?>" id="2days" autocomplete="off">In 2 day's </label>
                             <label class="btn btn-success">
-                                <input type="radio" name="date" id="Periodic" autocomplete="off">Periodic</label>
+                                <input type="radio" name="date[4]" value="" id="Periodic" autocomplete="off">Periodic</label>
 
                         </div>
                         <div class="divider"></div>
                         <h5 class="green">Time off day</h5>
                         <div class="btn-group" data-toggle="buttons">
                             <label class="btn btn-success active">
-                                <input type="checkbox" autocomplete="off" checked>Morning</label>
+                                <input type="checkbox" name="time[0]" value="morning"  autocomplete="off" >Morning</label>
                             <label class="btn btn-success active">
-                                <input type="checkbox" autocomplete="off">Afternoon</label>
+                                <input type="checkbox" name="time[1]" value="afternoon" autocomplete="off">Afternoon</label>
                             <label class="btn btn-success active">
-                                <input type="checkbox" autocomplete="off">Evening</label>
+                                <input type="checkbox" name="time[2]" value="evening" autocomplete="off">Evening</label>
 
                         </div>
                     </div>
@@ -139,14 +134,14 @@
 
             </div>
             <div class="row">
-                <div class="col-xs-9">
+                <div class="col-xs-11">
                     <div class="col-xs-6">
                         <i class="fa fa-user"></i> <label for="name">  Name</label>
                     <input type="text" class="form-control-green" name="name" placeholder="Name">
                     </div>
                     <div class="col-xs-6">
                     <i class="fa fa-android"></i> / <i class="fa fa-trash-o"></i> <label for="phone"> Phone</label>
-                    <input type="number" name="phone" placeholder="Phone" required="mast enter phone">
+                    <input type="number" name="phone" placeholder="Phone">
                     </div>
 
                 </div>
@@ -171,7 +166,7 @@
             <h3 class="center-block text-center">
                 <span class="flipHeader pull-left">Get</span>
                 <span class="logo" data-toggle="modal" data-target="#myModal">Grasshoppers</span>
-                <span class="fa fa-bars flipme pull-right"></span>
+                <span class="fa fa-bars flipMe pull-right"></span>
             </h3>
             <div class="row">
                 <div class="col-xs-8">
@@ -187,7 +182,7 @@
                 <div class="col-xs-3    ">
                         <label>Time</label>
                     <div class="switch">
-                        <input id="switchTime2" name="pay" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                        <input id="switchTime2" name="getTime" class="cmn-toggle cmn-toggle-round" type="checkbox">
                         <label for="switchTime2"></label>
                     </div>
                 </div>
