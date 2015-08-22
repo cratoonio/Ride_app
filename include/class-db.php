@@ -4,7 +4,8 @@ if (!class_exists('DB')) {
     {
         public function __construct()
         {
-            $mysqli = new mysqli('localhost', 'root', 'root', 'Ultron_DB');
+            $mysqli = new mysqli('localhost', 'root', 'root', 'carhop2er');
+            $mysqli->query("SET NAMES 'utf8'");
 
             if ($mysqli->connect_errno) {
                 printf("connection failed %s\n", $mysqli->connect_error);
