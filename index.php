@@ -1,7 +1,7 @@
 <?php include 'header.php'; ?>
     <div class="container" style="padding:3px">
         <div class="card" id="card">
-            <form method="post" action="give.php" accept-charset="UTF-8">>
+            <form method="post" action="give.php" accept-charset="UTF-8">
                 <div class="front">
                     <div class="row">
                         <div class="col-xs-4 pull-left">
@@ -17,7 +17,7 @@
                     <div class="row row-app">
                         <div class="col-xs-8">
                             <label for="origin">Origin</label>
-                            <div angucomplete-alt id="ex1" input-name="origin" placeholder="Origin" maxlength="50" pause="100" local-data="locations" search-fields="settlement" title-field="settlement" minlength="1" input-class="form-control input-sm form-control-green" match-class="highlight"></div>
+                            <div angucomplete-alt id="ex1" input-name="origin" placeholder="Origin" maxlength="50" pause="100" local-data="locations" search-fields="settlement" title-field="settlement" minlength="2" input-class="form-control input-sm form-control-green" match-class="highlight"></div>
                         </div>
                         <div class="col-xs-3">
                             <label>Price</label>
@@ -77,7 +77,7 @@
                     <div class="row row-app">
                         <div id="stops" class="col-xs-8">
                             </i> <label for="stops">Stops</label>
-                            <div angucomplete-alt id="ex1" input-name="stops" placeholder="Stops" maxlength="50" pause="100" selected-object="selectedCountry" local-data="locations" search-fields="settlement" title-field="settlement" minlength="1" input-class="form-control input-sm form-control-green" match-class="highlight"></div>
+                            <div angucomplete-alt id="ex1" input-name="stops" placeholder="Stops" maxlength="50" pause="100" selected-object="selectedCountry" local-data="locations" search-fields="settlement" title-field="settlement" minlength="2" input-class="form-control input-sm form-control-green" match-class="highlight"></div>
                         </div>
                         <div class="col-xs-3">
                             <i id="addstop" class="fa fa-plus-circle btn` btn-sm flipPage"></i>
@@ -86,7 +86,7 @@
                     <div class="row row-app">
                         <div class="col-xs-8">
                             <label for="destination">Destination</label>
-                            <div angucomplete-alt id="ex1" input-name="destination" placeholder="Destination" maxlength="50" pause="100" selected-object="selectedCountry" local-data="locations" search-fields="settlement" title-field="settlement" minlength="1" input-class="form-control input-sm form-control-green" match-class="highlight"></div>
+                            <div angucomplete-alt id="ex1" input-name="destination" placeholder="Destination" maxlength="50" pause="100" selected-object="selectedCountry" local-data="locations" search-fields="settlement" title-field="settlement" minlength="2" input-class="form-control input-sm form-control-green" match-class="highlight"></div>
                         </div>
                         <div class="col-xs-3">
                             <label>Time</label>
@@ -101,7 +101,7 @@
                             <h5 class="green">Time</h5>
                             <div class="btn-group" data-toggle="buttons">
                                 <label class="btn btn-success hideday active">
-                                    <input type="radio" name="date" value="<?php echo date("Y-m-d") ?>" id="Today" autocomplete="off" checked>Today</label>
+                                    <input type="radio" name="date" value="<?php echo date("Y-m-d ") ?>" id="Today" autocomplete="off" checked>Today</label>
                                 <label class="btn hideday btn-success">
                                     <input type="radio" name="date" value="<?php echo date("Y-m-d", strtotime("+1 days")) ?>" id="Tomorrow" autocomplete="off">Tomorrow </label>
                                 <label class="btn hideday btn-success">
@@ -179,13 +179,13 @@
                 <div class="row row-app">
                     <div class="col-xs-8">
                         <label for="origin">Origin</label>
-                        <div angucomplete-alt id="ex1" input-name="origin" placeholder="Origin" maxlength="50" pause="100" selected-object="selectedCountry" local-data="locations" search-fields="settlement" title-field="settlement" minlength="1" input-class="form-control input-sm form-control-green" match-class="highlight"></div>
+                        <div angucomplete-alt id="ex1" input-name="origin" placeholder="Origin" maxlength="50" pause="100" selected-object="selectedCountry" local-data="locations" search-fields="settlement" title-field="settlement" minlength="2" input-class="form-control input-sm form-control-green" match-class="highlight"></div>
                     </div>
                 </div>
                 <div class="row row-app">
                     <div class="col-xs-8">
                         <label for="destination">destination</label>
-                        <div angucomplete-alt id="ex1" input-name="destination" placeholder="Destination" maxlength="50" pause="100" selected-object="selectedCountry" local-data="locations" search-fields="settlement" title-field="settlement" minlength="1" input-class="form-control input-sm form-control-green" match-class="highlight"></div>
+                        <div angucomplete-alt id="ex1" input-name="destination" placeholder="Destination" maxlength="50" pause="100" selected-object="selectedCountry" local-data="locations" search-fields="settlement" title-field="settlement" minlength="2" input-class="form-control input-sm form-control-green" match-class="highlight"></div>
                     </div>
                     <div class="col-xs-3">
                         <label>Time</label>

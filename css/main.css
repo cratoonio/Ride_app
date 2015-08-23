@@ -1352,4 +1352,6 @@ ul {
     overflow-y: auto;
     max-height: 150px;
 }
-
+#withMoney, #withTime, #switchMoney, #switchTime{
+    -webkit-transform: translateZ(0) !important;
+}
