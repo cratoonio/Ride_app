@@ -17,8 +17,6 @@ $post = $_POST;
             <th>stop2</th>
             <th>stop3</th>
             <th>destination</th>
-            <th>name</th>
-            <th>phone</th>
             <th>date</th>
             <th>periodic</th>
             <th>sunday</th>
@@ -34,6 +32,8 @@ $post = $_POST;
             <th>petfriendly</th>
             <th>no ac</th>
             <th>smoker</th>
+            <th>name</th>
+            <th>phone</th>
         </tr>
         </thead>
         <?php $result = $query->get_trips($post['origin'],$post['destination']); ?>
@@ -47,8 +47,6 @@ $post = $_POST;
             echo '<td>'.$i->stop2S .'</td>';
             echo '<td>'.$i->stop3S .'</td>';
             echo '<td>'.$i->destinationS .'</td>';
-            echo '<td>'.$i->name .'</td>';
-            echo '<td>'.$i->phone .'</td>';
             echo '<td>'.$i->date .'</td>';
             echo '<td>'.$i->periodic .'</td>';
             echo '<td>'.$i->sun .'</td>';
@@ -64,6 +62,8 @@ $post = $_POST;
             echo '<td>'.$i->petfriendly .'</td>';
             echo '<td>'.$i->noAc .'</td>';
             echo '<td>'.$i->carfulDriver .'</td>';
+            echo '<td>'.$i->name .'</td>';
+            echo '<td>'.$i->phone .'</td>';
             echo '</tr>';}
         ?>
         </tbody>
