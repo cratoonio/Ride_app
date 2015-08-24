@@ -2,111 +2,54 @@
 if (!class_exists('query')) {
     class QUERY
     {
-        public function get_email($email)
+        public function get_trips($origin,$destination)
         {
             global $db;
 
             $query = "
-            SELECT * FROM Ultron_db.users WHERE email = '$email'
+                select * from
+                      (SELECT * from (
+                        (select * from trips_locations WHERE
+                          (trips_locations.originS = (SELECT locations.settelmentID FROM locations WHERE locations.settelment LIKE '$origin')) OR
+                          (trips_locations.stopsS = (SELECT locations.settelmentID FROM locations WHERE locations.settelment LIKE '$origin'))OR
+                          (trips_locations.stop2S = (SELECT locations.settelmentID FROM locations WHERE locations.settelment LIKE '$origin'))OR
+                          (trips_locations.stop3S = (SELECT locations.settelmentID FROM locations WHERE locations.settelment LIKE '$origin'))OR
+                          (trips_locations.originC = (SELECT locations.councilID FROM locations WHERE locations.settelment LIKE '$origin')) OR
+                          (trips_locations.stopsC = (SELECT locations.councilID FROM locations WHERE locations.settelment LIKE '$origin'))OR
+                          (trips_locations.stop2C = (SELECT locations.councilID FROM locations WHERE locations.settelment LIKE '$origin'))OR
+                          (trips_locations.stop3C = (SELECT locations.councilID FROM locations WHERE locations.settelment LIKE '$origin'))OR
+                          (trips_locations.originT = (SELECT locations.townID FROM locations WHERE locations.settelment LIKE '$origin')) OR
+                          (trips_locations.stopsT = (SELECT locations.townID FROM locations WHERE locations.settelment LIKE '$origin'))OR
+                          (trips_locations.stop2T = (SELECT locations.townID FROM locations WHERE locations.settelment LIKE '$origin'))OR
+                          (trips_locations.stop3T = (SELECT locations.townID FROM locations WHERE locations.settelment LIKE '$origin'))OR
+                          (trips_locations.originR = (SELECT locations.regionID FROM locations WHERE locations.settelment LIKE '$origin')) OR
+                          (trips_locations.stopsR = (SELECT locations.regionID FROM locations WHERE locations.settelment LIKE '$origin'))OR
+                          (trips_locations.stop2R = (SELECT locations.regionID FROM locations WHERE locations.settelment LIKE '$origin'))OR
+                          (trips_locations.stop3R = (SELECT locations.regionID FROM locations WHERE locations.settelment LIKE '$origin'))) as T)
+                      WHERE t.destinationS = (SELECT locations.settelmentID FROM locations WHERE locations.settelment LIKE '$destination') OR
+                            t.stopsS = (SELECT locations.settelmentID FROM locations WHERE locations.settelment LIKE '$destination') OR
+                            t.stop2S = (SELECT locations.settelmentID FROM locations WHERE locations.settelment LIKE '$destination') OR
+                            t.stop3S = (SELECT locations.settelmentID FROM locations WHERE locations.settelment LIKE '$destination') OR
+                            t.destinationC = (SELECT locations.councilID FROM locations WHERE locations.settelment LIKE '$destination') OR
+                            t.stopsC = (SELECT locations.councilID FROM locations WHERE locations.settelment LIKE '$destination') OR
+                            t.stop2C = (SELECT locations.councilID FROM locations WHERE locations.settelment LIKE '$destination') OR
+                            t.stop3C = (SELECT locations.councilID FROM locations WHERE locations.settelment LIKE '$destination') OR
+                            t.destinationT = (SELECT locations.townID FROM locations WHERE locations.settelment LIKE '$destination') OR
+                            t.stopsT = (SELECT locations.townID FROM locations WHERE locations.settelment LIKE '$destination') OR
+                            t.stop2T = (SELECT locations.townID FROM locations WHERE locations.settelment LIKE '$destination') OR
+                            t.stop3T = (SELECT locations.townID FROM locations WHERE locations.settelment LIKE '$destination') OR
+                            t.destinationR = (SELECT locations.regionID FROM locations WHERE locations.settelment LIKE '$destination') OR
+                            t.stopsR = (SELECT locations.regionID FROM locations WHERE locations.settelment LIKE '$destination') OR
+                            t.stop2R = (SELECT locations.regionID FROM locations WHERE locations.settelment LIKE '$destination') OR
+                            t.stop3R = (SELECT locations.regionID FROM locations WHERE locations.settelment LIKE '$destination'))as trips;
             ";
             $result = $db->connaction->query($query);
             while ($obj = $result->fetch_object()) {
-                $results[] = $obj;
+                $trips[] = $obj;
             }
-            return $results;
+            return $trips;
         }
 
-        public function login($username, $password)
-        {
-            global $db;
-
-            $query = "
-                SELECT * FROM Ultron_DB.users WHERE name = '$username'
-            ";
-            $result = $db->connaction->query($query);
-            while ($obj = $result->fetch_object()) {
-                $results[] = $obj;
-            }
-            if ($results) {
-                $obj_pass = $results[0]->password;
-                if (password_verify($password, $obj_pass)) {
-                    return true;
-                } else {
-                    return false;
-                }
-            } else {
-                return false;
-            }
-        }
-
-        public function get_nav()
-        {
-            global $db;
-
-            $query = "
-            SELECT * FROM Ultron_DB.nav_bar
-        ";
-            $result = $db->connaction->query($query);
-            while ($obj = $result->fetch_object()) {
-                $results[] = $obj;
-            }
-            return $results;
-        }
-
-        public function get_fullInventory()
-        {
-            global $db;
-
-            $query = "SELECT Stock_item.itemName,stock_placeInLane.placeinlane,amountInStock,stock_warehouse.WarehouseName
-                       FROM stock_inventory
-                       INNER JOIN Stock_item on Stock_item.ItemId = stock_inventory.itemID
-                       LEFT JOIN stock_placeInLane on stock_placeInLane.placeinlaneID = stock_inventory.PlaceInLane
-                       INNER JOIN stock_warehouse on stock_warehouse.WarehouseId =stock_inventory.WareHouseID";
-            $result = $db->connaction->query($query);
-            while ($obj = $result->fetch_object()) {
-                $results[] = $obj;
-            }
-            return $results;
-        }
-
-        public function get_items()
-        {
-            global $db;
-
-            $query = "SELECT itemName FROM Stock_item ";
-
-            $result = $db->connaction->query($query);
-            while ($obj = $result->fetch_object()) {
-                $results[] = $obj;
-            }
-            return $results;
-        }
-
-        public function get_warehouses()
-        {
-            global $db;
-
-            $query = "SELECT WarehouseName FROM stock_warehouse ";
-
-            $result = $db->connaction->query($query);
-            while ($obj = $result->fetch_object()) {
-                $results[] = $obj;
-            }
-            return $results;
-        }
-
-        public function get_placeInLane()
-        {
-            global $db;
-
-            $query = "SELECT stock_placeInLane.placeinlane FROM stock_placeInLane";
-
-            $result = $db->connaction->query($query);
-            while ($obj = $result->fetch_object()) {
-                $results[] = $obj;
-            }
-            return $results;
-        }
     }
 
 }

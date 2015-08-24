@@ -1,5 +1,5 @@
 <?php include 'header.php'; ?>
-    <div class="container" style="padding:3px">
+    <div class="container" style="padding:3px" xmlns="http://www.w3.org/1999/html">
         <div class="card" id="card">
             <form method="post" action="give.php" accept-charset="UTF-8">
                 <div class="front">
@@ -100,7 +100,7 @@
                         <div class="col-xs-12">
                             <h5 class="green">Time</h5>
                             <div class="btn-group" data-toggle="buttons">
-                                <label class="btn btn-success hideday active">
+                                <label id="today" class="btn btn-success hideday active">
                                     <input type="radio" name="date" value="<?php echo date("Y-m-d ") ?>" id="Today" autocomplete="off" checked>Today</label>
                                 <label class="btn hideday btn-success">
                                     <input type="radio" name="date" value="<?php echo date("Y-m-d", strtotime("+1 days")) ?>" id="Tomorrow" autocomplete="off">Tomorrow </label>
@@ -164,6 +164,7 @@
                     </button>
                 </div>
             </form>
+            <form method="post" action="get.php" accept-charset="UTF-8">
             <div class="back">
                 <div class="row">
                     <div class="col-xs-4 pull-left">
@@ -195,7 +196,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="withTime2" class="row row row-app bg-success" style="display:none">
+                <div id="withTime2" class="row row-app bg-success" style="display:none">
                     <div class="col-xs-12">
                         <h5 class="green">Money</h5>
                         <div class="btn-group" data-toggle="buttons">
@@ -218,8 +219,11 @@
                         </div>
                     </div>
                 </div>
+                <button type="submit" name="submit" class="text-center btn btn-default form-control-green">Lets do it!
+                </button>
             </div>
         </div>
+        </form>
     </div>
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">

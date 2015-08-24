@@ -13,8 +13,6 @@ $(function () {
         $(this).addClass('active');
         e.preventDefault();
     });
-
-
 });
 
 $(document).ready(function () {
@@ -88,9 +86,14 @@ $('#days').click(function () {
 $(".hideday").click(function () {
     $("#withDay").slideUp("fast");
     $(".day").removeClass("active");
+    $("#days").removeClass("active");
     $("#1,#2,#3,#4,#5,#6,#7").prop('checked', false);
 
 });
-
+$("#days").click(function () {
+    $("#today").prop('checked', true);
+    $(".hideday").removeClass("active");
+    $("#today").addClass("active");
+});
 
 

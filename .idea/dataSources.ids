@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - carhop2er@localhost" uuid="8831237a-eb5e-48f5-a54a-33e7a4cdeee4">
+    <database-info product="MySQL" version="5.5.42" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
+    <schema name="" catalog="carhop2er"/>
+    <table name="locations" schema="" catalog="carhop2er" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="settelment" sqlType="TINYTEXT" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="nameEN" sqlType="TINYTEXT" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="settelmentID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="council" sqlType="TINYTEXT" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="councilID" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="town" sqlType="TINYTEXT" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="townID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="region" sqlType="TINYTEXT" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="regionID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="bigregion" sqlType="TINYTEXT" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="updateID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MQ=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="trips_locations_ibfk_1" table="trips_locations" schema="" catalog="carhop2er" columns="originS"/>
+      <index name="settelmentID" unique="false" columns="settelmentID"/>
+    </table>
+    <table name="trips" schema="" catalog="carhop2er" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="origin" sqlType="TINYTEXT" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="destination" sqlType="TINYTEXT" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="stops" sqlType="TINYTEXT" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="stop2" sqlType="TINYTEXT" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="stop3" sqlType="TINYTEXT" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="name" sqlType="TINYTEXT" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="phone" sqlType="TINYTEXT" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="periodic" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="sun" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="mon" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="tue" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="wed" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="thu" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="fri" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="sat" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="time" sqlType="TINYTEXT" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="price" sqlType="TINYTEXT" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="remarks" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="petfriendly" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="noAc" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="carfulDriver" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="pass" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="trips_locations" schema="" catalog="carhop2er" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="originS" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="originC" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="originT" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="originR" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="destinationS" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="destinationC" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="destinationT" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="destinationR" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="stopsS" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="stopsC" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="stopsT" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="stopsR" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="stop2S" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="stop2C" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="stop2T" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="stop2R" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="stop3S" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="stop3C" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="stop3T" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="stop3R" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="name" sqlType="TINYTEXT" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phone" sqlType="TINYTEXT" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="periodic" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="sun" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="mon" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="tue" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="wed" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="thu" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="fri" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="sat" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="time" sqlType="TINYTEXT" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="price" sqlType="TINYTEXT" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="remarks" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="petfriendly" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="noAc" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="carfulDriver" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="pass" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="trips_locations_ibfk_1" columns="originS" ref-table="locations" ref-schema="" ref-catalog="carhop2er" ref-columns="settelmentID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="destinationS" unique="false" columns="destinationS,stopsS,stop2S,stop3S"/>
+    </table>
+  </data-source>
+</component>
