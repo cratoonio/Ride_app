@@ -198,7 +198,7 @@
                 </div>
                 <div id="withTime2" class="row row-app bg-success" style="display:none">
                     <div class="col-xs-12">
-                        <h5 class="green">Money</h5>
+                        <h5 class="green">Time</h5>
                         <div class="btn-group" data-toggle="buttons">
                             <label class="btn btn-success active">
                                 <input type="radio" name="date" id="Today" autocomplete="off" checked>Today</label>

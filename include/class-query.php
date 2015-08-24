@@ -7,7 +7,15 @@ if (!class_exists('query')) {
             global $db;
 
             $query = "
-                select * from
+            select * FROM
+                (select tr.id,
+                 (SELECT locations.settelment FROM locations WHERE locations.settelmentID = tr.originS) AS originS,
+                 (SELECT locations.settelment FROM locations WHERE locations.settelmentID = tr.stopsS) AS stopsS,
+                 (SELECT locations.settelment FROM locations WHERE locations.settelmentID = tr.stop2S) AS stop2S,
+                 (SELECT locations.settelment FROM locations WHERE locations.settelmentID = tr.stop3S) AS stop3S,
+                 (SELECT locations.settelment FROM locations WHERE locations.settelmentID = tr.destinationS) AS destinationS,
+                 tr.name,tr.phone,tr.date,tr.periodic,tr.sun,tr.mon,tr.tue,tr.wed,tr.thu,tr.fri,tr.sat,tr.time,tr.price,tr.remarks,tr.petfriendly,tr.noAc,tr.carfulDriver
+                 from
                       (SELECT * from (
                         (select * from trips_locations WHERE
                           (trips_locations.originS = (SELECT locations.settelmentID FROM locations WHERE locations.settelment LIKE '$origin')) OR
@@ -41,7 +49,8 @@ if (!class_exists('query')) {
                             t.destinationR = (SELECT locations.regionID FROM locations WHERE locations.settelment LIKE '$destination') OR
                             t.stopsR = (SELECT locations.regionID FROM locations WHERE locations.settelment LIKE '$destination') OR
                             t.stop2R = (SELECT locations.regionID FROM locations WHERE locations.settelment LIKE '$destination') OR
-                            t.stop3R = (SELECT locations.regionID FROM locations WHERE locations.settelment LIKE '$destination'))as trips;
+                            t.stop3R = (SELECT locations.regionID FROM locations WHERE locations.settelment LIKE '$destination'))as tr
+                            ) as R;
             ";
             $result = $db->connaction->query($query);
             while ($obj = $result->fetch_object()) {
