@@ -130,14 +130,9 @@
                             </div>
                             <div class="divider"></div>
                             <h5 class="green">Time off day</h5>
-                            <div class="btn-group" data-toggle="buttons">
-                                <label class="btn btn-success">
-                                    <input type="radio" name="time" value="morning" autocomplete="off">Morning</label>
-                                <label class="btn btn-success">
-                                    <input type="radio" name="time" value="afternoon" autocomplete="off">Afternoon</label>
-                                <label class="btn btn-success">
-                                    <input type="radio" name="time" value="evening" autocomplete="off">Evening</label>
-                            </div>
+
+                            <input id="ex8" data-slider-id='ex1Slider' name="time" type="text" data-slider-min="0" data-slider-max="23" data-slider-step="1" data-slider-value="<?php echo date("H");  ?>"/>
+
                         </div>
                     </div>
                     <div class="row">
@@ -218,6 +213,7 @@
                                 <input type="checkbox" autocomplete="off">Evening</label>
                         </div>
                     </div>
+
                 </div>
                 <button type="submit" name="submit" class="text-center btn btn-default form-control-green">Lets do it!
                 </button>

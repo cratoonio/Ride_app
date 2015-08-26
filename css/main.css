@@ -1,6 +1,7 @@
 /* =========================================================================
    Author's custom styles
    ========================================================================== */
+
 .drop {
     overflow-y: auto;
     max-height: 150px;
@@ -36,7 +37,7 @@ html, body {
 .card {
 
     height: 500px;
-    transition: all 0.3s ease-out;
+    /*transition: all 0.3s ease-out;*/
 
 }
 
@@ -272,9 +273,7 @@ input.cmn-toggle-round + label:before {
     -ms-border-radius: 60px;
     -o-border-radius: 60px;
     border-radius: 60px -webkit-transition : background 0.4 s;
-    -moz-transition: background 0.4s;
-    -o-transition: background 0.4s;
-    transition: background 0.4s;
+
 }
 
 input.cmn-toggle-round + label:after {
@@ -285,13 +284,7 @@ input.cmn-toggle-round + label:after {
     -ms-border-radius: 100%;
     -o-border-radius: 100%;
     border-radius: 100%;
-    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    -webkit-transition: margin 0.4s;
-    -moz-transition: margin 0.4s;
-    -o-transition: margin 0.4s;
-    transition: margin 0.4s;
+
 }
 
 input.cmn-toggle-round:checked + label:before {
@@ -1354,4 +1347,7 @@ ul {
 }
 #withMoney, #withTime, #switchMoney, #switchTime{
     -webkit-transform: translateZ(0) !important;
+}
+.slider{
+    margin-bottom: 5px;
 }

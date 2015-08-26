@@ -31,21 +31,21 @@ $(".flipMe").click(function () {
 $("#switchMoney").click(function () {
     if ($("#switchMoney").is(":checked")) {
         $(".card").css("height", $(".card").height() + 290);
-        $("#withMoney").slideDown("fast");
+        $("#withMoney").show();
     }
     else {
         $(".card").css("height", $(".card").height() - 290);
-        $("#withMoney").slideUp("fast");
+        $("#withMoney").hide();
     }
 });
 
 $("#switchTime").click(function () {
     if ($("#switchTime").is(":checked")) {
-        $("#withTime").slideDown("fast");
+        $("#withTime").show();
         $(".card").css("height", $(".card").height() + 250);
     }
     else {
-        $("#withTime").slideUp("fast");
+        $("#withTime").hide();
         $(".card").css("height", $(".card").height() - 250);
     }
 });
@@ -59,11 +59,11 @@ $("#stop2").hide();
 $("#stop3").hide();
 $("#switchTime2").click(function () {
     if ($("#switchTime2").is(":checked")) {
-        $("#withTime2").slideDown("fast");
+        $("#withTime2").show();
         $(".card").css("height", $(".card").height() + 150);
     }
     else {
-        $("#withTime2").slideUp("fast");
+        $("#withTime2").hide();
         $(".card").css("height", $(".card").height() - 150);
     }
 });
@@ -95,5 +95,7 @@ $("#days").click(function () {
     $(".hideday").removeClass("active");
     $("#today").addClass("active");
 });
-
+$("#ex8").slider({
+    tooltip: 'always'
+});
 
