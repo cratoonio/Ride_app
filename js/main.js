@@ -1,101 +1,70 @@
-$(function () {
-    $('#login-form-link').click(function (e) {
-        $("#login-form").delay(100).fadeIn(100);
-        $("#register-form").fadeOut(100);
-        $('#register-form-link').removeClass('active');
-        $(this).addClass('active');
-        e.preventDefault();
-    });
-    $('#register-form-link').click(function (e) {
-        $("#register-form").delay(100).fadeIn(100);
-        $("#login-form").fadeOut(100);
-        $('#login-form-link').removeClass('active');
-        $(this).addClass('active');
-        e.preventDefault();
-    });
-});
-
-$(document).ready(function () {
-
-    $('input').addClass('form-control input-sm')
-    $('select').addClass('form-control input-sm')
-});
 $("#card").flip({
     trigger: 'manual'
 });
-$(".flipMe").click(function () {
+$(".flipMe").click(function() {
     $("#card").flip('toggle');
 });
-
-
-$("#switchMoney").click(function () {
+$("#switchMoney").click(function() {
     if ($("#switchMoney").is(":checked")) {
         $(".card").css("height", $(".card").height() + 290);
         $("#withMoney").show();
-    }
-    else {
+    } else {
         $(".card").css("height", $(".card").height() - 290);
         $("#withMoney").hide();
     }
 });
-
-$("#switchTime").click(function () {
+$("#switchTime").click(function() {
     if ($("#switchTime").is(":checked")) {
         $("#withTime").show();
         $(".card").css("height", $(".card").height() + 250);
-    }
-    else {
+    } else {
         $("#withTime").hide();
         $(".card").css("height", $(".card").height() - 250);
     }
 });
-$(function () {
-    $('[data-toggle="tooltip"]').tooltip();
-
-})
-
-
-$("#stop2").hide();
-$("#stop3").hide();
-$("#switchTime2").click(function () {
+$("#switchTime2").click(function() {
     if ($("#switchTime2").is(":checked")) {
         $("#withTime2").show();
         $(".card").css("height", $(".card").height() + 150);
-    }
-    else {
+    } else {
         $("#withTime2").hide();
         $(".card").css("height", $(".card").height() - 150);
     }
 });
-
 var i = 2;
-$('#addstop').click(function () {
+$('#addstop').click(function() {
     if (i == 4) {
-        alert("you don't need more stops")
-    }
-    else {
+
+    } else {
         $(".card").css("height", $(".card").height() + 40);
-        $('#stops').append(" <input type=\"text\" name=\"stop" + i + "\" placeholder=\"Stop-" + i + "\" class=\"form-control input-sm form-control-green\">");
+        $("#stop" + i).show();
         i++;
     }
 });
-$('#days').click(function () {
-    $("#withDay").slideDown("fast");
-});
+$('#days').click(function() {
+    $("#withDay").show();
 
-$(".hideday").click(function () {
-    $("#withDay").slideUp("fast");
+});
+$(".hideday").click(function() {
+    $("#withDay").hide();
     $(".day").removeClass("active");
     $("#days").removeClass("active");
     $("#1,#2,#3,#4,#5,#6,#7").prop('checked', false);
 
 });
-$("#days").click(function () {
+
+$("#days").click(function() {
     $("#today").prop('checked', true);
     $(".hideday").removeClass("active");
     $("#today").addClass("active");
 });
-$("#ex8").slider({
-    tooltip: 'always'
+$("#ex6").on("slide", function(slideEvt) {
+    $("#ex6SliderVal").text(slideEvt.value + ":00");
 });
+$("#ex6").slider({
+    tooltip: 'hide'
+});
+$(function() {
+    $('[data-toggle="tooltip"]').tooltip();
 
+})

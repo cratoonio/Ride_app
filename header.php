@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="fonts/bariol/bariol.css"/>
     <link rel="stylesheet" href="css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/bootstrap-slider.css">
+
 
 </head>
 <body ng-controller="MainController">

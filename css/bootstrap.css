@@ -3146,7 +3146,7 @@ fieldset[disabled] .checkbox label {
 .form-group-sm .form-control {
     height: 30px;
     padding: 5px 10px;
-    font-size: 12px;
+    font-size: 15px;
     line-height: 1.5;
     border-radius: 3px;
 }
@@ -3445,7 +3445,7 @@ select[multiple].form-group-lg .form-control {
 
 .btn {
     display: inline-block;
-    padding: 6px 12px;
+    padding: 4px 9px;
     margin-bottom: 0;
     font-size: 14px;
     font-weight: normal;
@@ -3603,7 +3603,7 @@ fieldset[disabled] .btn-primary.active {
 .btn-success {
     color: #fff;
     background-color: #16A085;
-    border-color: #4cae4c;
+
 }
 
 .btn-success:focus,
