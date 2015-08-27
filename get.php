@@ -61,7 +61,7 @@ $post = $_POST;
             echo '<td>'.$i->remarks .'</td>';
             echo '<td>'.$i->petfriendly .'</td>';
             echo '<td>'.$i->noAc .'</td>';
-            echo '<td>'.$i->carfulDriver .'</td>';
+            echo '<td>'.$i->smoker .'</td>';
             echo '<td>'.$i->name .'</td>';
             echo '<td>'.$i->phone .'</td>';
             echo '</tr>';}

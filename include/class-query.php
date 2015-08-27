@@ -14,7 +14,7 @@ if (!class_exists('query')) {
                  (SELECT locations.settelment FROM locations WHERE locations.settelmentID = tr.stop2S) AS stop2S,
                  (SELECT locations.settelment FROM locations WHERE locations.settelmentID = tr.stop3S) AS stop3S,
                  (SELECT locations.settelment FROM locations WHERE locations.settelmentID = tr.destinationS) AS destinationS,
-                 tr.name,tr.phone,tr.date,tr.periodic,tr.sun,tr.mon,tr.tue,tr.wed,tr.thu,tr.fri,tr.sat,tr.time,tr.price,tr.remarks,tr.petfriendly,tr.noAc,tr.carfulDriver
+                 tr.name,tr.phone,tr.date,tr.periodic,tr.sun,tr.mon,tr.tue,tr.wed,tr.thu,tr.fri,tr.sat,tr.time,tr.price,tr.remarks,tr.petfriendly,tr.noAc,tr.smoker
                  from
                       (SELECT * from (
                         (select * from trips_locations WHERE

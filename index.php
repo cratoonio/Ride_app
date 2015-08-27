@@ -25,7 +25,7 @@
                                  minlength="2" input-class="form-control input-sm form-control-green"
                                  match-class="highlight"></div>
                         </div>
-                        <div class="col-xs-3">
+                        <div class="col-xs-3" style="padding-left: 0px">
                             <label>Price</label>
                             <div class="switch">
                                 <input id="switchMoney" class="cmn-toggle cmn-toggle-round"
@@ -89,8 +89,8 @@
                                     <input type="checkbox" name="noAC" value="1"
                                            autocomplete="off">No A/C</label>
                                 <label class="btn btn-success">
-                                    <input type="checkbox" name="carefulDriver"
-                                           value="1" autocomplete="off">Careful Driver
+                                    <input type="checkbox" name="smoker"
+                                           value="1" autocomplete="off">Smoker
                                 </label>
 
                             </div>
@@ -108,7 +108,7 @@
                                  input-class="form-control input-sm form-control-green"
                                  match-class="highlight"></div>
                         </div>
-                        <div class="col-xs-3">
+                        <div class="col-xs-3" style="padding-left: 0px">
                             <i id="addstop" class="fa fa-plus-circle btn` btn-sm flipPage"></i>
                         </div>
                         <div id="stop2" class="col-xs-8" style="display: none">
@@ -146,7 +146,7 @@
                                  input-class="form-control input-sm form-control-green"
                                  match-class="highlight"></div>
                         </div>
-                        <div class="col-xs-3">
+                        <div class="col-xs-3" style="padding-left: 0px">
                             <label>Time</label>
                             <div class="switch">
                                 <input id="switchTime" class="cmn-toggle cmn-toggle-round"
@@ -208,7 +208,7 @@
 
                             <input id="ex6" type="text" data-slider-min="0"
                                    data-slider-max="23" data-slider-step="1"
-                                   data-slider-value="<?php echo date("H "); ?>"/>
+                                   data-slider-value="<?php echo ltrim(date('H'), 0); ?>"/>
 
 
                         </div>
@@ -281,7 +281,7 @@
                                  input-class="form-control input-sm form-control-green"
                                  match-class="highlight"></div>
                         </div>
-                        <div class="col-xs-3">
+                        <div class="col-xs-3" style="padding-left: 0px">
                             <label>Time</label>
                             <div class="switch">
                                 <input id="switchTime2" name="getTime" class="cmn-toggle cmn-toggle-round"
@@ -293,29 +293,31 @@
                     <div id="withTime2" class="row row-app bg-success"
                          style="display:none">
                         <div class="col-xs-12">
-                            <h5 class="green">Time</h5>
+                            <h5 class="green">Day</h5>
                             <div class="btn-group" data-toggle="buttons">
-                                <label class="btn btn-success active">
-                                    <input type="radio" name="date" id="Today"
-                                           autocomplete="off" checked>Today</label>
-                                <label class="btn btn-success">
-                                    <input type="radio" name="date" id="Tomorrow"
-                                           autocomplete="off">Tomorrow</label>
-                                <label class="btn btn-success">
-                                    <input type="radio" name="date" id="2days"
-                                           autocomplete="off">In 2 day's </label>
+                                <label id="today" class="btn btn-success hideday active">
+                                    <input type="radio" name="date" value="<?php echo date("
+								Y-m-d ") ?>" id="Today" autocomplete="off"
+                                           checked>Today</label>
+                                <label class="btn hideday btn-success">
+                                    <input type="radio" name="date" value="<?php echo date("
+								Y-m-d ", strtotime("+1 days
+								")) ?>" id="Tomorrow" autocomplete="off">Tomorrow </label>
+                                <label class="btn hideday btn-success">
+                                    <input type="radio" name="date" value="<?php echo date("
+								Y-m-d ", strtotime("+2 days
+								")) ?>" id="2days" autocomplete="off">In 2 day's </label>
+
                             </div>
+
                             <div class="divider"></div>
-                            <h5 class="green">Time off day</h5>
-                            <div class="btn-group" data-toggle="buttons">
-                                <label class="btn btn-success active">
-                                    <input type="checkbox" autocomplete="off"
-                                           checked>Morning</label>
-                                <label class="btn btn-success active">
-                                    <input type="checkbox" autocomplete="off">Afternoon</label>
-                                <label class="btn btn-success active">
-                                    <input type="checkbox" autocomplete="off">Evening</label>
-                            </div>
+                            <h5 class="green" id="ex5CurrentSliderValLabel">Time off day <b><span id="ex65liderVal"><?php echo date("H:i"); ?></span></b></h5>
+
+                            <input id="ex5" type="text" data-slider-min="0"
+                                   data-slider-max="23" data-slider-step="1"
+                                   data-slider-value="<?php echo ltrim(date('H'), 0); ?>"/>
+
+
                         </div>
 
                     </div>
@@ -325,6 +327,8 @@
         </div>
         </form>
     </div>
+
+<!--modal-->
     <div class="modal fade" id="myModal" tabindex="-1"
          role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">

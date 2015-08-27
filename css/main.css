@@ -66,10 +66,12 @@ body {
 .flipPage {
     background-color: #Ffffff;
     color: #16A085;
-    margin-top: 30px
+    margin-top: 27px;
+    border: 1px solid #ccc;
 }
 .switch {
-    margin-top: 3px
+    margin-top: 7px;
+
 }
 #withTime,
 #withTime2 {
@@ -215,8 +217,8 @@ textarea {
 
 input.cmn-toggle-round + label {
     padding: 2px;
-    width: 63px;
-    height: 30px;
+    width: 48px;
+    height: 24px;
     background-color: #dddddd;
     -webkit-border-radius: 60px;
     -moz-border-radius: 60px;
@@ -243,7 +245,7 @@ input.cmn-toggle-round + label:before {
     border-radius: 60px -webkit-transition: background 0.4 s;
 }
 input.cmn-toggle-round + label:after {
-    width: 30px;
+    width: 23px;
     background-color: #fff;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
