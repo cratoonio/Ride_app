@@ -55,7 +55,7 @@ body {
     padding: 15px;
     background-color: #16a085;
     border-radius: 22px;
-    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.4);
+
 }
 .form-control-green:focus {
     border-color: aquamarine;
@@ -1349,4 +1349,63 @@ ul {
 .zoomIn {
     -webkit-animation-name: zoomIn;
     animation-name: zoomIn;
+}
+.report {
+    min-height: 67px;
+    padding: 1px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-top: 5px;
+    background-color: #16A085;
+    text-align: center;
+    margin-top: 13px;
+    border-radius: 18px 18px 0px 0px;
+}
+.reportInfo {
+    min-height: 20px;
+    padding: 0px;
+    background-color: #DFF0D8;
+    text-align: center;
+    color: #000000;
+
+}.reportFooter {
+     min-height: 20px;
+     padding: 0px;
+     background-color: #16A085;
+     border-bottom: 2px solid #1E824C;
+     text-align: center;
+     color: #ffffff;
+     border-radius: 0px 0px 18px 18px;
+ }
+
+.divider {
+    height: 1px;
+    width: 100%;
+    display: block;
+    margin: 2px 0;
+    overflow: hidden;
+    background-color: #DFF0D8;
+}
+.dividerH {
+    border-left: 10px solid #DFF0D8;
+    height: 35px;
+    position: absolute;
+    right: 362px;
+    top: 60px;
+}
+.rowInfo{
+    margin-bottom: 1px;
+    margin-top: 3px;
+}
+
+.wellInfo {
+    color: #000000;
+    min-height: 20px;
+    padding: 1px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-bottom:3px;
+    background-color: #DFF0D8;
+    border-radius: 30px;
+    text-align: center;
 }
