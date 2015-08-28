@@ -16,7 +16,7 @@ if (!class_exists('query')) {
                  (SELECT locations.settelment FROM locations WHERE locations.settelmentID = tr.destinationS) AS destinationS,
                  tr.name,tr.phone,tr.date,tr.periodic,tr.sun,tr.mon,tr.tue,tr.wed,tr.thu,tr.fri,tr.sat,tr.time,tr.price,tr.remarks,tr.petfriendly,tr.noAc,tr.smoker
                  from
-                      (SELECT * from (
+                      (SELECT * from
                         (select * from trips_locations WHERE
                           (trips_locations.originS = (SELECT locations.settelmentID FROM locations WHERE locations.settelment LIKE '$origin')) OR
                           (trips_locations.stopsS = (SELECT locations.settelmentID FROM locations WHERE locations.settelment LIKE '$origin'))OR
@@ -33,7 +33,7 @@ if (!class_exists('query')) {
                           (trips_locations.originR = (SELECT locations.regionID FROM locations WHERE locations.settelment LIKE '$origin')) OR
                           (trips_locations.stopsR = (SELECT locations.regionID FROM locations WHERE locations.settelment LIKE '$origin'))OR
                           (trips_locations.stop2R = (SELECT locations.regionID FROM locations WHERE locations.settelment LIKE '$origin'))OR
-                          (trips_locations.stop3R = (SELECT locations.regionID FROM locations WHERE locations.settelment LIKE '$origin'))) as T)
+                          (trips_locations.stop3R = (SELECT locations.regionID FROM locations WHERE locations.settelment LIKE '$origin'))) as T
                       WHERE t.destinationS = (SELECT locations.settelmentID FROM locations WHERE locations.settelment LIKE '$destination') OR
                             t.stopsS = (SELECT locations.settelmentID FROM locations WHERE locations.settelment LIKE '$destination') OR
                             t.stop2S = (SELECT locations.settelmentID FROM locations WHERE locations.settelment LIKE '$destination') OR
@@ -58,18 +58,7 @@ if (!class_exists('query')) {
             }
             return $trips;
         }
-        public function get_locations()
-        {
-            global $db;
 
-            $query = " select locations.settelment,locations.council from locations limit 1
-            ";
-            $result = $db->connaction->query($query);
-            while ($obj = $result->fetch_object()) {
-                $locations[] = '{settlement:"'.$obj["settelment"].'",'.'council:"'. $obj["council"].'"}';
-            }
-            return $locations;
-        }
     }
 
 }
