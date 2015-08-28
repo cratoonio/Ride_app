@@ -58,7 +58,18 @@ if (!class_exists('query')) {
             }
             return $trips;
         }
+        public function get_locations()
+        {
+            global $db;
 
+            $query = " select locations.settelment,locations.council from locations limit 1
+            ";
+            $result = $db->connaction->query($query);
+            while ($obj = $result->fetch_object()) {
+                $locations[] = '{settlement:"'.$obj["settelment"].'",'.'council:"'. $obj["council"].'"}';
+            }
+            return $locations;
+        }
     }
 
 }

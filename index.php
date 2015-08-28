@@ -92,8 +92,6 @@
                                     <input type="radio" name="price" value="food"
                                            autocomplete="off">Food</label>
                             </div>
-
-
                             <div class="divider"></div>
                             <h5 class="green">Terms</h5>
 
@@ -232,8 +230,6 @@
                             <input id="ex6" type="text" data-slider-min="0"
                                    data-slider-max="23" data-slider-step="1"
                                    data-slider-value="<?php echo ltrim(date('H'), 0); ?>"/>
-
-
                         </div>
                     </div>
                     <div class="row">
