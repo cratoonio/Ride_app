@@ -5,8 +5,6 @@ app.controller('MainController', ['$scope', '$http',
         $scope.remoteUrlRequestFn = function (str) {
             return {q: str};
         };
-        $http.get("~/json.php")
-            .success(function (response) {$scope.locations = response.records;});
         $scope.locations = [
             {settlement: "אבו גווייעד", council: " "},
             {settlement: "אבו גוש", council: " "},

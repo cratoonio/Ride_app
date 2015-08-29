@@ -14,7 +14,7 @@
                         </h3>
 
                         <div class="col-xs-4">
-                            <span class="fa fa-bars flipMe pull-right"></span>
+                            <span class="fa fa-bars fa-2x flipMe pull-right"></span>
                         </div>
                     </div>
                     <div class="row row-app">
@@ -278,7 +278,7 @@
                         </h3>
 
                         <div class="col-xs-4">
-                            <span class="fa fa-bars flipMe pull-right"></span>
+                            <span class="fa fa-bars fa-2x flipMe pull-right"></span>
                         </div>
                     </div>
                     <div class="row row-app">
@@ -339,7 +339,7 @@
 
                             <div class="divider"></div>
                             <h5 class="green" id="ex5CurrentSliderValLabel">Time off day <b><span
-                                        id="ex65liderVal"><?php echo date("H:i"); ?></span></b></h5>
+                                        id="ex5SliderVal"><?php echo date("H:i"); ?></span></b></h5>
 
                             <input id="ex5" type="text" data-slider-min="0"
                                    data-slider-max="23" data-slider-step="1"

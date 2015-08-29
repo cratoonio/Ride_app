@@ -64,12 +64,14 @@ $("#ex6").on("slide", function (slideEvt) {
 $("#ex6").slider({
     tooltip: 'hide'
 });
+
 $("#ex5").on("slide", function (slideEvt) {
     $("#ex5SliderVal").text(slideEvt.value + ":00");
 });
 $("#ex5").slider({
     tooltip: 'hide'
 });
+
 $(function () {
     $('[data-toggle="tooltip"]').tooltip();
 
@@ -92,7 +94,6 @@ $(document).ready(function(){
 
         });
         return false;
-
     });
 });
 $(document).ready(function(){
