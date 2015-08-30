@@ -104,6 +104,7 @@ $(document).ready(function(){
 
             // show the response
             $('#response1').empty();
+            $('#response1').html("Done.");
             $('#result').html(data);
 
         }).fail(function() {

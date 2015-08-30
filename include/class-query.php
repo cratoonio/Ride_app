@@ -5,53 +5,32 @@ if (!class_exists('query')) {
         public function get_trips($origin,$destination)
         {
             global $db;
-
-            $query = "
-            select * FROM
-                (select tr.id,
-                 (SELECT locations.settelment FROM locations WHERE locations.settelmentID = tr.originS) AS originS,
-                 (SELECT locations.settelment FROM locations WHERE locations.settelmentID = tr.stopsS) AS stopsS,
-                 (SELECT locations.settelment FROM locations WHERE locations.settelmentID = tr.stop2S) AS stop2S,
-                 (SELECT locations.settelment FROM locations WHERE locations.settelmentID = tr.stop3S) AS stop3S,
-                 (SELECT locations.settelment FROM locations WHERE locations.settelmentID = tr.destinationS) AS destinationS,
-                 tr.name,tr.phone,tr.date,tr.periodic,tr.sun,tr.mon,tr.tue,tr.wed,tr.thu,tr.fri,tr.sat,tr.time,tr.price,tr.remarks,tr.petfriendly,tr.noAc,tr.smoker
-                 from
-                      (SELECT * from
-                        (select * from trips_locations WHERE
-                          (trips_locations.originS = (SELECT locations.settelmentID FROM locations WHERE locations.settelment LIKE '$origin')) OR
-                          (trips_locations.stopsS = (SELECT locations.settelmentID FROM locations WHERE locations.settelment LIKE '$origin'))OR
-                          (trips_locations.stop2S = (SELECT locations.settelmentID FROM locations WHERE locations.settelment LIKE '$origin'))OR
-                          (trips_locations.stop3S = (SELECT locations.settelmentID FROM locations WHERE locations.settelment LIKE '$origin'))OR
-                          (trips_locations.originC = (SELECT locations.councilID FROM locations WHERE locations.settelment LIKE '$origin')) OR
-                          (trips_locations.stopsC = (SELECT locations.councilID FROM locations WHERE locations.settelment LIKE '$origin'))OR
-                          (trips_locations.stop2C = (SELECT locations.councilID FROM locations WHERE locations.settelment LIKE '$origin'))OR
-                          (trips_locations.stop3C = (SELECT locations.councilID FROM locations WHERE locations.settelment LIKE '$origin'))OR
-                          (trips_locations.originT = (SELECT locations.townID FROM locations WHERE locations.settelment LIKE '$origin')) OR
-                          (trips_locations.stopsT = (SELECT locations.townID FROM locations WHERE locations.settelment LIKE '$origin'))OR
-                          (trips_locations.stop2T = (SELECT locations.townID FROM locations WHERE locations.settelment LIKE '$origin'))OR
-                          (trips_locations.stop3T = (SELECT locations.townID FROM locations WHERE locations.settelment LIKE '$origin'))OR
-                          (trips_locations.originR = (SELECT locations.regionID FROM locations WHERE locations.settelment LIKE '$origin')) OR
-                          (trips_locations.stopsR = (SELECT locations.regionID FROM locations WHERE locations.settelment LIKE '$origin'))OR
-                          (trips_locations.stop2R = (SELECT locations.regionID FROM locations WHERE locations.settelment LIKE '$origin'))OR
-                          (trips_locations.stop3R = (SELECT locations.regionID FROM locations WHERE locations.settelment LIKE '$origin'))) as T
-                      WHERE t.destinationS = (SELECT locations.settelmentID FROM locations WHERE locations.settelment LIKE '$destination') OR
-                            t.stopsS = (SELECT locations.settelmentID FROM locations WHERE locations.settelment LIKE '$destination') OR
-                            t.stop2S = (SELECT locations.settelmentID FROM locations WHERE locations.settelment LIKE '$destination') OR
-                            t.stop3S = (SELECT locations.settelmentID FROM locations WHERE locations.settelment LIKE '$destination') OR
-                            t.destinationC = (SELECT locations.councilID FROM locations WHERE locations.settelment LIKE '$destination') OR
-                            t.stopsC = (SELECT locations.councilID FROM locations WHERE locations.settelment LIKE '$destination') OR
-                            t.stop2C = (SELECT locations.councilID FROM locations WHERE locations.settelment LIKE '$destination') OR
-                            t.stop3C = (SELECT locations.councilID FROM locations WHERE locations.settelment LIKE '$destination') OR
-                            t.destinationT = (SELECT locations.townID FROM locations WHERE locations.settelment LIKE '$destination') OR
-                            t.stopsT = (SELECT locations.townID FROM locations WHERE locations.settelment LIKE '$destination') OR
-                            t.stop2T = (SELECT locations.townID FROM locations WHERE locations.settelment LIKE '$destination') OR
-                            t.stop3T = (SELECT locations.townID FROM locations WHERE locations.settelment LIKE '$destination') OR
-                            t.destinationR = (SELECT locations.regionID FROM locations WHERE locations.settelment LIKE '$destination') OR
-                            t.stopsR = (SELECT locations.regionID FROM locations WHERE locations.settelment LIKE '$destination') OR
-                            t.stop2R = (SELECT locations.regionID FROM locations WHERE locations.settelment LIKE '$destination') OR
-                            t.stop3R = (SELECT locations.regionID FROM locations WHERE locations.settelment LIKE '$destination'))as tr
-                            ) as R;
+            $query1 = "
+                    SET @orig = (SELECT settelmentID FROM locations WHERE locations.settelment LIKE '$origin'),
+                    @couns = (SELECT councilID FROM locations WHERE locations.settelment LIKE '$origin'),
+                    @town = (SELECT townID FROM locations WHERE locations.settelment LIKE '$origin'),
+                    @regu = (SELECT regionID FROM locations WHERE locations.settelment LIKE '$origin'),
+                    @dest = (SELECT settelmentID FROM locations WHERE locations.settelment LIKE '$destination'),
+                    @Dcouns = (SELECT councilID FROM locations WHERE locations.settelment LIKE '$destination'),
+                    @Dtown = (SELECT townID FROM locations WHERE locations.settelment LIKE '$destination'),
+                    @Dregu = (SELECT regionID FROM locations WHERE locations.settelment LIKE '$destination');";
+            $query = "select  tr.id,
+                      ('$origin') AS originS,
+                      (SELECT locations.settelment FROM locations WHERE locations.settelmentID = tr.stopsS) AS stopsS,
+                      (SELECT locations.settelment FROM locations WHERE locations.settelmentID = tr.stop2S) AS stop2S,
+                      (SELECT locations.settelment FROM locations WHERE locations.settelmentID = tr.stop3S) AS stop3S,
+                      ('$destination') AS destinationS,
+                      tr.name,tr.phone,tr.date,tr.periodic,tr.sun,tr.mon,tr.tue,tr.wed,tr.thu,tr.fri,tr.sat,tr.time,tr.price,
+                      tr.remarks,tr.petfriendly,tr.noAc,tr.smoker FROM
+                     (select * FROM  (select * from trips_locations where originS = @orig OR stopsS = @rig or stop2S = @orig or stop3S = @orig
+                     or originS = @couns or stopsC = @couns or stop2C = @couns or stop3C = @couns or originT = @town or stopsT = @town
+                     or stop2T = @town or stop3T = @town or originR = @regu or stopsR = @regu or stop2R = @regu or stop3R = @regu)as t
+                     WHERE t.destinationS = @dest or t.stopsS = @dest or t.stop2S = @dest or t.stop3S = @dest
+                     or t.destinationC = @Dcouns or t.stopsC = @Dcouns or t.stop2C = @Dcouns or t.stop3C = @Dcouns
+                     or t.destinationT = @Dtown or t.stopsT = @Dtown or t.stop2T = @Dtown or t.stop3T = @Dtown
+                     or t.destinationR = @Dregu or t.stopsR = @Dregu or t.stop2R = @Dregu or t.stop3R = @Dregu) as tr;
             ";
+            $db->connaction->query($query1);
             $result = $db->connaction->query($query);
             while ($obj = $result->fetch_object()) {
                 $trips[] = $obj;
