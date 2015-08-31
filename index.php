@@ -8,12 +8,9 @@
                         <div class="col-xs-4 pull-left">
                             <span class="flipHeader pull-left">Give</span>
                         </div>
-                        <h3 class="center-block text-center col-xs-4">
-                            <span style="" class="logo" data-toggle="modal" data-target="#myModal">CarHop<span
-                                    style="color:#fff;font-size:10px;vertical-align:super;font-weight:400">2</span>er</span>
-                        </h3>
 
-                        <div class="col-xs-4">
+
+                        <div class="col-xs-4 pull-right">
                             <span class="fa fa-bars fa-2x flipMe pull-right"></span>
                         </div>
                     </div>
@@ -272,12 +269,9 @@
                         <div class="col-xs-4 pull-left">
                             <span class="flipHeader pull-left">Get</span>
                         </div>
-                        <h3 class="center-block text-center col-xs-4">
-                            <span style="" class="logo" data-toggle="modal" data-target="#myModal">CarHop<span
-                                    style="color:#fff;font-size:10px;vertical-align:super;font-weight:400">2</span>er</span>
-                        </h3>
 
-                        <div class="col-xs-4">
+
+                        <div class="col-xs-4 pull-right">
                             <span class="fa fa-bars fa-2x flipMe pull-right"></span>
                         </div>
                     </div>
@@ -363,8 +357,8 @@
 
 
     </div>
-    <!--modal-->
-    <div class="modal fade" id="myModal" tabindex="-1"
+    <!--modal contact us-->
+    <div class="modal" id="myModal" tabindex="-1"
          role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -380,12 +374,13 @@
                     <p>Got any remarks? Think we just have to
                         change something? Write up anything
                         on your mind.</p>
-                    <small>if you have a request it would nice be if you can add a name so we know you're a real person.
+                    <small>if you have a request it would  be if you can add a name so we know you're a real person.
                     </small>
                     <label for="complaints">
 					<textarea rows="7" cols="50" name="complaints"
                               class="form-control"></textarea>
                     </label>
+
                 </div>
                 <div style="color:#000;height:75px" class="modal-footer">
                     <img src="images/turbine.png" class="pull-left"
@@ -393,10 +388,58 @@
                     <small style="margin-top:20px;margin-left:3px"
                            class="pull-left">Powered by turbine
                     </small>
-                    <button type="button" class="btn btn-default pull-right"
-                            data-dismiss="modal">Close
+
+                    <button type="submit" name="submit" class="text-center btn btn-default form-control-green  ">Ok.
                     </button>
                 </div>
+            </div>
+        </div>
+    </div>
+    <!--modal add settelment-->
+    <div class="modal" id="myModal1" tabindex="-1"
+         role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"
+                            aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" style="color:#000"
+                        id="myModalLabel">So you wanna add a settlement.
+                    </h4>
+                </div>
+
+                <div style="color:#000000" class="modal-body">
+                    <p>The thing is if you wanna add a settlement you need to follow a couple of rules first we need the <b>name</b> of the settlement second the <b>town</b> its in
+                    or a town close by.</p>
+                    <div class="row">
+                        <div class="col-xs-6">
+                    <label for="newSett" name="newSett">New settlement</label>
+                        <input type="text" class="form-control form-control-green" name="newSett" placeholder="New settlement" required="">
+
+                        </div>
+                        <div class="col-xs-6">
+                    <label for="origin">Origin</label>
+                    <div angucomplete-alt id="ex1" input-name="town"
+                         placeholder="town" maxlength="50"
+                         pause="100" local-data="locations"
+                         search-fields="settlement" title-field="settlement"
+                         minlength="2" input-class="form-control form-control-green"
+                         match-class="highlight"></div>
+                                 </div>
+                        </div>
+                </div>
+                <div style="color:#000;height:75px" class="modal-footer">
+                    <img src="images/turbine.png" class="pull-left"
+                         style="width:20px;margin-top:15px"/>
+                    <small style="margin-top:20px;margin-left:3px"
+                           class="pull-left">Powered by turbine
+                    </small>
+
+                    <button type="submit" name="submit" class="text-center btn btn-default form-control-green  ">Ok.
+                    </button>
+                </div>
+
             </div>
         </div>
     </div>

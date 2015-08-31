@@ -5,7 +5,7 @@ $result = $query->get_trips($post['origin'], $post['destination']);
 $counter = 0;
 foreach ($result as $i) {
     if($counter%2==0){echo '<div class="row">';}
-    echo '<div class="col-xs-12 col-md-6 col-lg-6 col-sm-6"><div class="report"><div class="rowInfo row"><div class="col-xs-4"><i class="fa fa-user"></i>&nbsp;&nbsp;&nbsp;'. $i->name .
+    echo '<div class="col-xs-12 col-md-6 col-lg-6 col-sm-6" ><div class="report"><div class="rowInfo row"><div class="col-xs-4"><i class="fa fa-user"></i>&nbsp;&nbsp;&nbsp;'. $i->name .
          '</div><div class="col-xs-4">'.$i->date .'</div><div class="col-xs-4"><i class="fa fa-phone"></i>&nbsp;&nbsp;&nbsp;'
          . $i->phone . '</div></div><div class="rowInfo row">';
     if($i->originS==$post['origin']){echo '<div class="col-xs-12"><div class="wellInfo" style="border-radius: 30px 30px 0px 0px;margin-bottom: 0px;background-color: #C8F7A8">' . $i->originS . '</div></div>';}else{echo '<div class="col-xs-12"><div class="wellInfo" style="border-radius: 30px 30px 0px 0px;margin-bottom: 0px">' . $i->originS . '</div></div>';}

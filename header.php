@@ -22,3 +22,4 @@
 
 </head>
 <body ng-controller="MainController">
+<?php include "nav.php"; ?>
