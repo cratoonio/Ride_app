@@ -16,6 +16,15 @@ if (!class_exists('INSERT')) {
                   '$smoker','')";
             return $db->insert($query);
         }
+        public function comment($comment,$time)
+        {
+            global $db;
+
+            $query = "
+                  INSERT INTO contect_us (comment,date)VALUES ('$comment','$time')";
+
+            return $db->insert($query);
+        }
     }
 }
 $insert = new INSERT;

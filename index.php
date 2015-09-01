@@ -21,7 +21,7 @@
                             <div angucomplete-alt id="ex1" input-name="origin"
                                  placeholder="Origin" maxlength="50"
                                  pause="100" local-data="locations"
-                                 search-fields="settlement" title-field="settlement"
+                                 search-fields="settelment" title-field="settelment"
                                  minlength="2" input-class="form-control input-sm form-control-green"
                                  match-class="highlight"></div>
                         </div>
@@ -115,35 +115,35 @@
                             <div angucomplete-alt id="ex1" input-name="stops"
                                  placeholder="Stops" maxlength="50"
                                  pause="100" selected-object="selectedCountry"
-                                 local-data="locations" search-fields="settlement"
-                                 title-field="settlement" minlength="2"
+                                 local-data="locations" search-fields="settelment"
+                                 title-field="settelment" minlength="2"
                                  input-class="form-control input-sm form-control-green"
                                  match-class="highlight"></div>
                         </div>
                         <div class="col-xs-3" style="padding-left: 0px">
-                            <i id="addstop" class="fa fa-plus-circle btn` btn-sm flipPage"></i>
+                            <i id="addstop" class="fa fa-plus-circle btn btn-sm flipPage"></i>
                         </div>
                         <div id="stop2" class="col-xs-8" style="display: none">
                             </i>
-                            <label for="stops"></label>
+                            <label for="stops">stop-2</label>
 
                             <div angucomplete-alt id="ex1" input-name="stop2"
                                  placeholder="Stop-2" maxlength="50"
                                  pause="100" selected-object="selectedCountry"
-                                 local-data="locations" search-fields="settlement"
-                                 title-field="settlement" minlength="2"
+                                 local-data="locations" search-fields="settelment"
+                                 title-field="settelment" minlength="2"
                                  input-class="form-control input-sm form-control-green"
                                  match-class="highlight"></div>
                         </div>
                         <div id="stop3" class="col-xs-8" style="display: none">
                             </i>
-                            <label for="stops"></label>
+                            <label for="stops">stop-3</label>
 
                             <div angucomplete-alt id="ex1" input-name="stop3"
                                  placeholder="Stop-3" maxlength="50"
                                  pause="100" selected-object="selectedCountry"
-                                 local-data="locations" search-fields="settlement"
-                                 title-field="settlement" minlength="2"
+                                 local-data="locations" search-fields="settelment"
+                                 title-field="settelment" minlength="2"
                                  input-class="form-control input-sm form-control-green"
                                  match-class="highlight"></div>
                         </div>
@@ -156,8 +156,8 @@
                             <div angucomplete-alt id="ex1" input-name="destination"
                                  placeholder="Destination" maxlength="50"
                                  pause="100" selected-object="selectedCountry"
-                                 local-data="locations" search-fields="settlement"
-                                 title-field="settlement" minlength="2"
+                                 local-data="locations" search-fields="settelment"
+                                 title-field="settelment" minlength="2"
                                  input-class="form-control input-sm form-control-green"
                                  match-class="highlight"></div>
                         </div>
@@ -224,7 +224,7 @@
                             <h5 class="green" id="ex6CurrentSliderValLabel">Time off day <b><span
                                         id="ex6SliderVal"><?php echo date("H:i"); ?></span></b></h5>
 
-                            <input id="ex6" type="text" data-slider-min="0"
+                            <input id="ex6" type="text" name="time" data-slider-min="0"
                                    data-slider-max="23" data-slider-step="1"
                                    data-slider-value="<?php echo ltrim(date('H'), 0); ?>"/>
                         </div>
@@ -282,8 +282,8 @@
                             <div angucomplete-alt id="ex1" input-name="origin"
                                  placeholder="Origin" maxlength="50"
                                  pause="100" selected-object="selectedCountry"
-                                 local-data="locations" search-fields="settlement"
-                                 title-field="settlement" minlength="2"
+                                 local-data="locations" search-fields="settelment"
+                                 title-field="settelment" minlength="2"
                                  input-class="form-control input-sm form-control-green"
                                  match-class="highlight"></div>
                         </div>
@@ -295,8 +295,8 @@
                             <div angucomplete-alt id="ex1" input-name="destination"
                                  placeholder="Destination" maxlength="50"
                                  pause="100" selected-object="selectedCountry"
-                                 local-data="locations" search-fields="settlement"
-                                 title-field="settlement" minlength="2"
+                                 local-data="locations" search-fields="settelment"
+                                 title-field="settelment" minlength="2"
                                  input-class="form-control input-sm form-control-green"
                                  match-class="highlight"></div>
                         </div>
@@ -333,12 +333,12 @@
 
                             <div class="divider"></div>
                             <h5 class="green" id="ex5CurrentSliderValLabel">Time off day <b><span
-                                        id="ex5SliderVal"><?php echo date("H:i"); ?></span></b></h5>
-
-                            <input id="ex5" type="text" data-slider-min="0"
+                                        id="ex5SliderVal">0:00</span> - 24:00</b></h5>
+<!--                            --><?php //echo date("H:i"); ?>
+                            <input id="ex5" type="text" name="time" data-slider-min="0"
                                    data-slider-max="23" data-slider-step="1"
-                                   data-slider-value="<?php echo ltrim(date('H'), 0); ?>"/>
-
+                                   data-slider-value="0"/>
+<!--                            --><?php //echo ltrim(date('H'), 0); ?>
 
                         </div>
 
@@ -351,12 +351,12 @@
                 </div>
         </div>
         </form>
-        <div id="result">
 
-        </div>
-
+    <div id="result">
 
     </div>
+    </div>
+
     <!--modal contact us-->
     <div class="modal" id="myModal" tabindex="-1"
          role="dialog" aria-labelledby="myModalLabel">
@@ -370,6 +370,7 @@
                         id="myModalLabel">Welcome young <i class="green">grasshoppers!</i>
                     </h4>
                 </div>
+                <form  id="comment" accept-charset="UTF-8">
                 <div style="color:#000000" class="modal-body">
                     <p>Got any remarks? Think we just have to
                         change something? Write up anything
@@ -388,9 +389,11 @@
                     <small style="margin-top:20px;margin-left:3px"
                            class="pull-left">Powered by turbine
                     </small>
-
+                            <div id="responsecommnet"></div>
                     <button type="submit" name="submit" class="text-center btn btn-default form-control-green  ">Ok.
                     </button>
+
+                    </form>
                 </div>
             </div>
         </div>
@@ -405,17 +408,17 @@
                             aria-label="Close"><span aria-hidden="true">&times;</span>
                     </button>
                     <h4 class="modal-title" style="color:#000"
-                        id="myModalLabel">So you wanna add a settlement.
+                        id="myModalLabel">So you wanna add a settelment.
                     </h4>
                 </div>
 
                 <div style="color:#000000" class="modal-body">
-                    <p>The thing is if you wanna add a settlement you need to follow a couple of rules first we need the <b>name</b> of the settlement second the <b>town</b> its in
+                    <p>The thing is if you wanna add a settelment you need to follow a couple of rules first we need the <b>name</b> of the settelment second the <b>town</b> its in
                     or a town close by.</p>
                     <div class="row">
                         <div class="col-xs-6">
-                    <label for="newSett" name="newSett">New settlement</label>
-                        <input type="text" class="form-control form-control-green" name="newSett" placeholder="New settlement" required="">
+                    <label for="newSett" name="newSett">New settelment</label>
+                        <input type="text" class="form-control form-control-green" name="newSett" placeholder="New settelment" required="">
 
                         </div>
                         <div class="col-xs-6">
@@ -423,7 +426,7 @@
                     <div angucomplete-alt id="ex1" input-name="town"
                          placeholder="town" maxlength="50"
                          pause="100" local-data="locations"
-                         search-fields="settlement" title-field="settlement"
+                         search-fields="settelment" title-field="settelment"
                          minlength="2" input-class="form-control form-control-green"
                          match-class="highlight"></div>
                                  </div>

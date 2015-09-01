@@ -4836,7 +4836,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-brand {
     float: left;
     height: 50px;
-    padding: 7px 11px;
+    padding: 10px 11px;
     font-size: 18px;
     line-height: 20px;
 }
@@ -5141,7 +5141,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 
 .navbar-default .navbar-toggle {
     border-color: #ddd;
-    z-index: 9999999999;
+    z-index: 999;
 }
 
 .navbar-default .navbar-toggle:hover,

@@ -64,13 +64,22 @@ $("#ex6").on("slide", function (slideEvt) {
 $("#ex6").slider({
     tooltip: 'hide'
 });
+$(".slider").click(function () {
+        $("#ex6SliderVal").text($('#ex6').val()+":00");
+    }
+);
 
 $("#ex5").on("slide", function (slideEvt) {
     $("#ex5SliderVal").text(slideEvt.value + ":00");
 });
+$
 $("#ex5").slider({
     tooltip: 'hide'
 });
+$(".slider").click(function () {
+        $("#ex5SliderVal").text($('#ex5').val()+":00");
+    }
+);
 
 $(function () {
     $('[data-toggle="tooltip"]').tooltip();
@@ -118,3 +127,22 @@ $(document).ready(function(){
     $( "input[name='origin']").attr("required","");
     $( "input[name='destination']").attr("required","");
 });
+
+
+$(document).ready(function(){
+    $('#comment').submit(function(){
+
+        $('#responsecommnet').html('sec...');
+        $.post('contactus.php', $(this).serialize(), function(){
+            // show the response
+            $('#responsecommnet').empty();
+            $('#responsecommnet').html("Done.");
+
+        }).fail(function() {
+            // just in case posting your form failed
+            alert( "Posting failed." );
+        });
+        return false;
+    });
+});
+

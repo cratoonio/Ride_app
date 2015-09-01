@@ -1,7 +1,7 @@
 <?php
 include "include/class-query.php";
 $post = $_POST;
-$result = $query->get_trips($post['origin'], $post['destination']);
+$result = $query->get_trips($post['origin'], $post['destination'],$post['date'],$post['time']);
 $counter = 0;
 foreach ($result as $i) {
     if($counter%2==0){echo '<div class="row">';}
@@ -28,7 +28,7 @@ foreach ($result as $i) {
     if($i->sat==1){echo ' ש';}else{echo '<i style="color:#d7d7d7 ">ש</i>';}
     echo '</span></div></div>'.$i->remarks;
     echo '</div><div class="reportFooter"><div class="col-xs-12"><div class="col-xs-6" style="color:#ffffff ">'.$i->price.
-        '<i class="fa fa-ils" style="font-size: 11px;"></i></div><div class="col-xs-6" style="color:#ffffff">'.$i->price.
+        '<i class="fa fa-ils" style="font-size: 11px;"></i></div><div class="col-xs-6" style="color:#ffffff">'.$i->time.
         ':00</div></div></div></div>';
     if($counter%2!=0){echo '</div>';}
     $counter++;
