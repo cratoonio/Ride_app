@@ -15,11 +15,11 @@ if (!class_exists('query')) {
                     @Dtown = (SELECT townID FROM locations WHERE locations.settelment LIKE '$destination'),
                     @Dregu = (SELECT regionID FROM locations WHERE locations.settelment LIKE '$destination');";
             $query = "select  tr.id,
-                      ('$origin') AS originS,
+                      (SELECT locations.settelment FROM locations WHERE locations.settelmentID = tr.originS) AS originS,
                       (SELECT locations.settelment FROM locations WHERE locations.settelmentID = tr.stopsS) AS stopsS,
                       (SELECT locations.settelment FROM locations WHERE locations.settelmentID = tr.stop2S) AS stop2S,
                       (SELECT locations.settelment FROM locations WHERE locations.settelmentID = tr.stop3S) AS stop3S,
-                      ('$destination') AS destinationS,
+                      (SELECT locations.settelment FROM locations WHERE locations.settelmentID = tr.destinationS ) AS destinationS,
                       tr.name,tr.phone,tr.date,tr.periodic,tr.sun,tr.mon,tr.tue,tr.wed,tr.thu,tr.fri,tr.sat,tr.time,tr.price,
                       tr.remarks,tr.petfriendly,tr.noAc,tr.smoker FROM
                      (select * FROM  (select * from trips_locations where '$date' = trips_locations.date and trips_locations.time >= '$time' and (originS = @orig OR stopsS = @rig or stop2S = @orig or stop3S = @orig
@@ -48,6 +48,15 @@ if (!class_exists('query')) {
                 $locations[] = $obj;
             }
             return $locations;
+        }
+        public function validate_sett($sett)
+        {
+            global $db;
+            $query = "
+                    SELECT locations.id FROM locations WHERE settelment like '$sett'
+            ";
+            $result = $db->connaction->query($query);
+            return $result;
         }
 
     }

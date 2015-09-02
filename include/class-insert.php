@@ -25,6 +25,17 @@ if (!class_exists('INSERT')) {
 
             return $db->insert($query);
         }
+        public function add_set($new_loc,$town)
+        {
+            global $db;
+
+            $query = "
+                  INSERT INTO locations  ( settelment, nameEN, settelmentID, council, councilID, town, townID, region, regionID, bigregion, updateID)
+                  SELECT '$new_loc', nameEN, (select locations.id+1 FROM locations ORDER BY locations.id DESC LIMIT 1) AS settelmentID, council, councilID, town, townID, region, regionID,bigregion,(666) as updateID
+                   FROM locations WHERE locations.settelment like '$town'";
+
+            return $db->insert($query);
+        }
     }
 }
 $insert = new INSERT;

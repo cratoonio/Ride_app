@@ -411,7 +411,7 @@
                         id="myModalLabel">So you wanna add a settelment.
                     </h4>
                 </div>
-
+                <form  id="addsett" accept-charset="UTF-8">
                 <div style="color:#000000" class="modal-body">
                     <p>The thing is if you wanna add a settelment you need to follow a couple of rules first we need the <b>name</b> of the settelment second the <b>town</b> its in
                     or a town close by.</p>
@@ -438,10 +438,11 @@
                     <small style="margin-top:20px;margin-left:3px"
                            class="pull-left">Powered by turbine
                     </small>
-
+                        <div id="responssett"></div>
                     <button type="submit" name="submit" class="text-center btn btn-default form-control-green  ">Ok.
                     </button>
                 </div>
+                </form>
 
             </div>
         </div>

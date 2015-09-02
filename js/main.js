@@ -100,6 +100,7 @@ $(document).ready(function(){
 
             // just in case posting your form failed
             alert( "Posting failed." );
+            $('#response').empty();
 
         });
         return false;
@@ -119,6 +120,7 @@ $(document).ready(function(){
         }).fail(function() {
             // just in case posting your form failed
             alert( "Posting failed." );
+            $('#response1').empty();
         });
         return false;
     });
@@ -126,6 +128,7 @@ $(document).ready(function(){
 $(document).ready(function(){
     $( "input[name='origin']").attr("required","");
     $( "input[name='destination']").attr("required","");
+    $( "input[name='town']").attr("required","");
 });
 
 
@@ -133,14 +136,34 @@ $(document).ready(function(){
     $('#comment').submit(function(){
 
         $('#responsecommnet').html('sec...');
-        $.post('contactus.php', $(this).serialize(), function(){
+        $.post('contactus.php', $(this).serialize(), function(data){
             // show the response
             $('#responsecommnet').empty();
             $('#responsecommnet').html("Done.");
+            $('#responsecommnet').html(data);
 
         }).fail(function() {
             // just in case posting your form failed
             alert( "Posting failed." );
+            $('#responsecommnet').empty();
+        });
+        return false;
+    });
+});
+$(document).ready(function(){
+    $('#addsett').submit(function(){
+
+        $('#responssett').html('sec...');
+        $.post('addsett.php', $(this).serialize(), function(data){
+            // show the response
+            $('#responssett').empty();
+            $('#responssett').html("Done.");
+            $('#responssett').html(data);
+
+        }).fail(function() {
+            // just in case posting your form failed
+            alert( "Posting failed." );
+            $('#responssett').empty();
         });
         return false;
     });
