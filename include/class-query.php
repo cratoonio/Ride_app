@@ -22,7 +22,7 @@ if (!class_exists('query')) {
                       (SELECT locations.settelment FROM locations WHERE locations.settelmentID = tr.destinationS ) AS destinationS,
                       tr.name,tr.phone,tr.date,tr.periodic,tr.sun,tr.mon,tr.tue,tr.wed,tr.thu,tr.fri,tr.sat,tr.time,tr.price,
                       tr.remarks,tr.petfriendly,tr.noAc,tr.smoker FROM
-                     (select * FROM  (select * from trips_locations where '$date' = trips_locations.date and trips_locations.time >= '$time' and (originS = @orig OR stopsS = @rig or stop2S = @orig or stop3S = @orig
+                     (select * FROM  (select * from trips_locations where (('$date' = trips_locations.date and trips_locations.time >= '$time')or trips_locations.periodic =1) and (originS = @orig OR stopsS = @rig or stop2S = @orig or stop3S = @orig
                      or originS = @couns or stopsC = @couns or stop2C = @couns or stop3C = @couns or originT = @town or stopsT = @town
                      or stop2T = @town or stop3T = @town or originR = @regu or stopsR = @regu or stop2R = @regu or stop3R = @regu))as t
                      WHERE  t.destinationS = @dest or t.stopsS = @dest or t.stop2S = @dest or t.stop3S = @dest
@@ -54,6 +54,17 @@ if (!class_exists('query')) {
             global $db;
             $query = "
                     SELECT locations.id FROM locations WHERE settelment like '$sett'
+            ";
+            $result = $db->connaction->query($query);
+            return $result;
+        }
+
+        public function delete_trip($name,$phone,$password)
+        {
+            global $db;
+            $query = "
+                    delete from trips_locations WHERE trips_locations.name like '$name' and trips_locations.phone like '$phone'
+                    and pass = '$password'
             ";
             $result = $db->connaction->query($query);
             return $result;

@@ -19,6 +19,7 @@
 
             <li><a  data-toggle="modal" data-target="#myModal1">add settlement</a></li>
             <li class=""><a data-toggle="modal" data-target="#myModal">contect us</a></li>
+            <li class=""><a data-toggle="modal" data-target="#myModal2" style="color: #a91d1d;">Delete trip</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
 

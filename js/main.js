@@ -168,4 +168,23 @@ $(document).ready(function(){
         return false;
     });
 });
+$(document).ready(function(){
+    $('#delete').submit(function(){
+
+        $('#respondelete').html('sec...');
+        $.post('delete.php', $(this).serialize(), function(data){
+            // show the response
+            $('#respondelete').empty();
+            $('#respondelete').html("Done.");
+            $('#respondelete').html(data);
+
+        }).fail(function() {
+            // just in case posting your form failed
+            alert( "Posting failed." );
+            $('#responssett').empty();
+        });
+        return false;
+    });
+});
+
 
