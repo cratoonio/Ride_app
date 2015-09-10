@@ -10,7 +10,7 @@
     </div>
 
     <a class="navbar-brand">
-                            <span style="font-size: 23px;font-weight: bolder" class="">CarHop<span
+                            <span style="font-size: 23px;font-weight: bolder" class="">Hop<span
                                     style="color:#777777;font-size:10px;vertical-align:super;font-weight:bolder ">2</span>er</span>
     </a>
 
