@@ -15,14 +15,17 @@
     </a>
 
     <div class="collapse navbar-collapse" id="navbar-collapse1">
-        <ul class="nav navbar-nav navbar-left">
-
-            <li><a  data-toggle="modal" data-target="#myModal1">add settlement</a></li>
-            <li class=""><a data-toggle="modal" data-target="#myModal">contect us</a></li>
-            <li class=""><a data-toggle="modal" data-target="#myModal2" style="color: #a91d1d;">Delete trip</a></li>
-        </ul>
         <ul class="nav navbar-nav navbar-right">
 
+            <li class=""><a data-toggle="modal" data-target="#myModal2" style="color: #a91d1d;">מחק נסיעה</a></li>
+
+
+            <li><a  data-toggle="modal" data-target="#myModal1">הוסף ישוב/מיקום</a></li>
+
+        </ul>
+        <ul class="nav navbar-nav navbar-left">
+            <li class=""><a data-toggle="modal" data-target="#myModal">צור קשר</a></li>
+            <li class=""><a data-toggle="modal" data-target="#myModal3" >הדרכת שימוש</a></li>
        </ul>
     </div>
 </nav>

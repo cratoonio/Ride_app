@@ -6,29 +6,29 @@ $(".flipMe").click(function () {
 });
 $("#switchMoney").click(function () {
     if ($("#switchMoney").is(":checked")) {
-        $(".card").css("height", $(".card").height() + 150);
+        $(".card").css("height", $(".card").height() + 200);
         $("#withMoney").show();
     } else {
-        $(".card").css("height", $(".card").height() - 150);
+        $(".card").css("height", $(".card").height() - 200);
         $("#withMoney").hide();
     }
 });
 $("#switchTime").click(function () {
     if ($("#switchTime").is(":checked")) {
         $("#withTime").show();
-        $(".card").css("height", $(".card").height() + 160);
+        $(".card").css("height", $(".card").height() + 200);
     } else {
         $("#withTime").hide();
-        $(".card").css("height", $(".card").height() - 160);
+        $(".card").css("height", $(".card").height() - 200);
     }
 });
 $("#switchTime2").click(function () {
     if ($("#switchTime2").is(":checked")) {
         $("#withTime2").show();
-        $(".card").css("height", $(".card").height() + 160);
+        $(".card").css("height", $(".card").height() + 200);
     } else {
         $("#withTime2").hide();
-        $(".card").css("height", $(".card").height() - 160);
+        $(".card").css("height", $(".card").height() - 200);
     }
 });
 var i = 2;

@@ -21,5 +21,5 @@
 
 
 </head>
-<body ng-controller="MainController">
+<body ng-controller="MainController" dir="rtl">
 <?php include "nav.php"; ?>

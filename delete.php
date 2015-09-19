@@ -6,12 +6,12 @@ if(!empty($result['name'])) {
         if (!empty($result['password'])) {
                 $query->delete_trip($result['name'],$result['phone'],$result['password']);
         }else{
-            echo "input wrong!";
+            echo "לא הוכנסה סיסמא";
         }
     } else{
-        echo "input wrong!";
+        echo "לא הוכנס מספר טלפון";
     }
 }else{
-    echo "input wrong!";
+    echo "לא הוכנס שם";
 }
 
