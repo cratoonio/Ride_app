@@ -1,16 +1,13 @@
 
 <nav class="navbar navbar-default" role="navigation">
-
     <div class="navbar-header">
-<!--    <a class="navbar-brand pull-left" href="#"><img alt="Brand" src="images/turbine.png" style="height: 37px;"></a>-->
-
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="fa fa-bars fa-2x" style="color: darkgrey;"></span>
         </button>
     </div>
 
     <a class="navbar-brand">
-                            <span style="font-size: 23px;font-weight: bolder" class="">Hop<span
+                            <span style="font-size: 23px;font-weight: bolder" class="">carHop<span
                                     style="color:#777777;font-size:10px;vertical-align:super;font-weight:bolder ">2</span>er</span>
     </a>
 

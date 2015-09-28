@@ -1,18 +1,15 @@
 <?php include 'header.php'; ?>
-    <div class="container" style="padding:3px"
-         xmlns="http://www.w3.org/1999/html">
+    <div class="container" style="padding:3px" xmlns="http://www.w3.org/1999/html">
         <div class="card" id="card">
             <form  id="give" accept-charset="UTF-8">
                 <div class="back">
                     <div class="row">
                         <div class="col-xs-4 pull-right">
-                            <span class="fa fa-bars fa-2x flipMe pull-right"></span>
+                            <span class="fa fa-hand-o-up fa-2x flipMe pull-right"></span>
                         </div>
                         <div class="col-xs-4 pull-left">
                                <span class="flipHeader pull-left">Give</span>
                         </div>
-
-
                     </div>
                     <div class="row row-app">
                         <div class="col-xs-3" style="padding-left: 0px">
@@ -26,7 +23,6 @@
                         </div>
                         <div class="col-xs-8">
                             <label for="origin">מוצא</label>
-
                             <div angucomplete-alt id="ex1" input-name="origin"
                                  placeholder="מוצא" maxlength="50"
                                  pause="100" local-data="locations"
@@ -155,7 +151,6 @@
                     <div class="row row-app">
                         <div class="col-xs-3" style="padding-left: 0px">
                             <label>זמן יציאה</label>
-
                             <div class="switch">
                                 <input id="switchTime" class="cmn-toggle cmn-toggle-round"
                                        type="checkbox">
@@ -164,7 +159,6 @@
                         </div>
                         <div class="col-xs-8">
                             <label for="destination">יעד</label>
-
                             <div angucomplete-alt id="ex1" input-name="destination"
                                  placeholder="יעד" maxlength="50"
                                  pause="100" selected-object="selectedCountry"
@@ -232,10 +226,11 @@
                                    data-slider-value="<?php echo ltrim(date('H'), 0); ?>"/>
                         </div>
                     </div>
-                    <div class="row row-dwn">
-                        <div class="col-xs-12">
-                            <div class="col-xs-4 pull-right">
-                                <i class="fa fa-user"></i>
+                    <div class="row row-app">
+
+                            <div class="col-xs-1 pull-right"></div>
+                            <div class="col-xs-3 pull-right">
+                                <i class="fa fa-user "></i>
                                 <label for="name">שם</label>
                                 <input type="text" class="form-control-green form-control input-sm"
                                        name="name" placeholder="שם" data-toggle="tooltip" title="או כינוי. כל מילה שאת/ה אוהב/ת שצועקים לעברך מדי פעם" required="">
@@ -247,15 +242,18 @@
                                 <input type="number" class="form-control input-sm form-control-green"
                                        name="phone" placeholder="טלפון"  data-toggle="tooltip" title="המספר של המכשיר שאת/ה לא מסוגל/ת לעזוב ליותר מחמש דקות..." required>
                             </div>
-                             <div class="col-xs-4">
+                             <div class="col-xs-3 pull-right">
                                 <label for="pass">סיסמא</label>
                                 <input type="number" class="form-control input-sm form-control-green"
                                        name="pass" data-toggle="tooltip" title="הכנס סיסמא פשוטה על מנת למחוק את הנסיעה" placeholder="סיסמא למחיקה"  required>
                             </div>
-                        </div>
+
+
                     </div>
+
                     <div class="row row-app">
-                        <div class="col-xs-11">
+                          <div class="col-xs-1 pull-right"></div>
+                        <div class="col-xs-10 pull-right    ">
                             <label for="remarks">הערות/תוספות</label>
 						<textarea class="form-control form-control-green input-sm"
                                   placeholder="הכנס מידע נוסף אודות הנסיעה"
@@ -283,7 +281,7 @@
 
 
                         <div class="col-xs-4 pull-right">
-                            <span class="fa fa-bars fa-2x flipMe pull-right"></span>
+                            <span class="fa fa-hand-o-up fa-2x flipMe pull-right"></span>
                         </div>
                     </div>
                     <div class="row row-app">
@@ -403,7 +401,7 @@
                            class="pull-left">Powered by turbine
                     </small>
                             <div id="responsecommnet"></div>
-                    <button type="submit" name="submit" class="text-center btn btn-default form-control-green  ">שלח
+                    <button type="submit" name="submit" class="text-center btn btn-default form-control-green">שלח
                     </button>
 
                     </form>
@@ -429,7 +427,7 @@
                     <p>כדי להוסיף מיקום לרשימה שלנו עליך לעקוב אחרי מספר כללים: ראשית כתוב את שם הישוב/מיקום החדש - במידה ומדובר במיקום ספציפי יש להוסיף תיאור כגון מרכז מסחרי/אצטדיון/רחוב וכדומה, שנית אנא ציין את הישוב הקרוב,או הישוב בו נמצא המיקום החדש.
                     </p>
                     <div class="row" style="margin-top: 10px">
-                        <div class="col-xs-6">
+                        <div class="col-xs-6 pull-right">
                     <label for="origin">ישוב קרוב </label>
                     <div angucomplete-alt id="ex1" input-name="town"
                          placeholder="ישוב קרוב" maxlength="50"
@@ -438,7 +436,7 @@
                          minlength="2" input-class="form-control form-control-green"
                          match-class="highlight"></div>
                                  </div>
-                        <div class="col-xs-6">
+                        <div class="col-xs-6 pull-right">
                     <label for="newSett" name="newSett">ישוב/מיקום חדש</label>
                         <input type="text" class="form-control form-control-green" name="newSett" placeholder="ישוב/מיקום חדש" required="">
 
@@ -452,7 +450,7 @@
                            class="pull-left">Powered by turbine
                     </small>
                         <div id="responssett"></div>
-                    <button type="submit" name="submit" class="text-center btn btn-default form-control-green  ">שלח
+                    <button type="submit" name="submit" class="text-center btn btn-default form-control-green">שלח
                     </button>
                 </div>
                 </form>
@@ -517,6 +515,19 @@
                 <div style="color:#000000" class="modal-body">
 
                 </div>
+                <div class="modal-header">
+                    <button type="button" class="close pull-left" data-dismiss="modal"
+                            aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" style="color:#000"
+                        id="myModalLabel">הדרכת שימוש באתר
+                    </h4>
+                </div>
+
+                <div style="color:#000000" class="modal-body">
+
+                </div>
+
                 <div style="color:#000;height:75px" class="modal-footer">
                     <img src="images/turbine.png" class="pull-left"
                          style="width:20px;margin-top:15px"/>

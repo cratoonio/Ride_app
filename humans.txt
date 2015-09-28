@@ -3,13 +3,13 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    <Turbine> -- <Just another programmer;)> -- <twitter>
 
 # THANKS
 
-    <name>
+    <Sergay kraivoy>
 
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
-    jQuery, Modernizr
+    jQuery, Modernizr,Bootstrap

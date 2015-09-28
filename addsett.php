@@ -8,6 +8,6 @@ if(!empty($_POST['newSett'])){
     }else{
         $insert->add_set($_POST['newSett'],$_POST['town']);
     }
-
-
+}else{
+    echo "There was a problem with the upload";
 }

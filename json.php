@@ -2,4 +2,8 @@
 
 include 'include/class-query.php';
 $loc = $query->locations();
-print_r(json_encode($loc,JSON_UNESCAPED_UNICODE));
+if(!empty($loc)){
+print_r(json_encode($loc,JSON_UNESCAPED_UNICODE));}
+else{
+    echo "no data Uploaded";
+}

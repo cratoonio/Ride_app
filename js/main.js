@@ -88,16 +88,13 @@ $(function () {
 
 $(document).ready(function(){
     $('#give').submit(function(){
-
         // show that something is loading
         $('#response').html('<img src="images/ajax-loader.gif">');
         $.post('give.php', $(this).serialize(), function(){
-
             // show the response
             $('#response').empty();
-            $('#response').html("Drive safe. its Up");
+            $('#response').html("נהג/י בזהירות הנסיעה במאגר");
         }).fail(function() {
-
             // just in case posting your form failed
             alert( "Posting failed." );
             $('#response').empty();
@@ -111,10 +108,8 @@ $(document).ready(function(){
         // show that something is loading
         $('#response1').html('<img src="images/ajax-loader.gif">');
         $.post('get.php', $(this).serialize(), function(data){
-
-            // show the response
             $('#response1').empty();
-            $('#response1').html("Done.");
+            $('#response1').html("גלול למטה לתוצאות. לא נמצאה תשובה? נסי/ה לשנות את זמני החיפוש");
             $('#result').html(data);
 
         }).fail(function() {
@@ -139,7 +134,7 @@ $(document).ready(function(){
         $.post('contactus.php', $(this).serialize(), function(data){
             // show the response
             $('#responsecommnet').empty();
-            $('#responsecommnet').html("Done.");
+            $('#responsecommnet').html("קיבלנו, תודה");
             $('#responsecommnet').html(data);
 
         }).fail(function() {
@@ -157,7 +152,7 @@ $(document).ready(function(){
         $.post('addsett.php', $(this).serialize(), function(data){
             // show the response
             $('#responssett').empty();
-            $('#responssett').html("Done.");
+            $('#responssett').html("הישוב הוכנס למאגר. רענן את העמוד על מנת להשתמש בו");
             $('#responssett').html(data);
 
         }).fail(function() {
@@ -175,7 +170,7 @@ $(document).ready(function(){
         $.post('delete.php', $(this).serialize(), function(data){
             // show the response
             $('#respondelete').empty();
-            $('#respondelete').html("Done.");
+            $('#respondelete').html("הנסיעה נמחקה");
             $('#respondelete').html(data);
 
         }).fail(function() {
