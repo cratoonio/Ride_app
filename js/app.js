@@ -7,7 +7,7 @@ app.controller('MainController', ['$scope', '$http',
             return {q: str};
         };
 
-        $http.get('http://localhost/Ride_app/json.php').success(function(data) {
+        $http.get('http://localhost:63342/Ride_app/json.php').success(function(data) {
 
                 $scope.locations = data;
             }).error(function() {alert('no Data uploaded.')
