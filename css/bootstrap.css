@@ -4843,7 +4843,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     height: 50px;
     padding: 10px 11px;
     font-size: 18px;
-    line-height: 20px;
+    line-height: 16px;
 }
 
 .navbar-brand:hover,

@@ -22,12 +22,13 @@ foreach ($result as $i) {
     if($i->destinationS==$post['destination'])
     {echo '<div class="col-xs-12"><div class="wellInfo" style="border-radius: 0px 0px 30px 30px;background-color: #f7cea4">' . $i->destinationS . '</div></div>';}else{echo '<div class="col-xs-12"><div class="wellInfo" style="border-radius: 0px 0px 30px 30px;">' . $i->destinationS . '</div></div>';}
     echo '</div></div><div class="reportInfo"><div class="col-xs-12"><div class="col-xs-6" style="font-size: 15px">';
-    if($i->petfriendly==1){echo '<i class="fa fa-paw" style="color: #16A085"></i>  |  ';
-    }else{echo '<i class="fa fa-paw" style="color: #d7d7d7"></i>  |  ';}
-    if($i->smoker==1){echo '<i class="fa fa-fire" style="color: #16A085"></i>   | ';
-    }else{echo '<i class="fa fa-fire" style="color: #d7d7d7"></i>   | ';}
-    if($i->noAc==1){echo '<i class="fa fa-leaf" style="color: #16A085"></i></div>';
-    }else{echo '<i class="fa fa-leaf" style="color: #d7d7d7"></i></div>';}
+    if($i->petfriendly==1){echo '<i class="" style="color: #16A085">חיות</i>  |  ';
+    }else{echo '<i class="" style="color: #d7d7d7">חיות</i>  |  ';}
+    if($i->smoker==1){echo '<i class="" style="color: #16A085">מעשן</i>   ';
+    }else{echo '<i class="" style="color: #d7d7d7">מעשן</i>   ';}
+    // if($i->noAc==1){echo '<i class="" style="color: #d7d7d7">מזגן</i></div>';
+    // }else{echo '<i class="" style="color: #16A085">מזגן</i></div>';}
+    echo '</div>';
     echo '<div class="col-xs-6"><span class="" style="color: #16A085;font-size: 15px">';
     if($i->sun==1){echo 'א ';}else{echo '<i style="color:#d7d7d7 ">א </i>';}
     if($i->mon==1){echo 'ב ';}else{echo '<i style="color:#d7d7d7 ">ב </i>';}

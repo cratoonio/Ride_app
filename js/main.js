@@ -135,7 +135,7 @@ $(document).ready(function(){
             // show the response
             $('#responsecommnet').empty();
             $('#responsecommnet').html("קיבלנו, תודה");
-            $('#responsecommnet').html(data);
+            //$('#responsecommnet').html(data);
 
         }).fail(function() {
             // just in case posting your form failed

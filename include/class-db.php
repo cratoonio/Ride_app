@@ -4,6 +4,7 @@ if (!class_exists('DB')) {
     {
         public function __construct()
         {
+            
             $mysqli = new mysqli('localhost', 'root', 'root', 'carhop2er');
             $mysqli->query("SET NAMES 'utf8'");
 
